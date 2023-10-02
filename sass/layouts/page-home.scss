@@ -1,0 +1,6 @@
+.wrapper {
+    background-color: orangered;
+    > div {
+        border: 2px solid pink;
+    }
+}

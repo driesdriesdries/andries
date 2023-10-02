@@ -23,30 +23,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 
-html {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%; }
-  
-  :root {
-    --color-primary: #BE431B;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0; }
-  
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit; }
-  
-  html {
-    box-sizing: border-box;
-    font-size: 62.5%; }
-  
-  ::selection {
-    background-color: var(--color-primary); }
-
-h1 {
-    font-size: 5rem;
-}
+@import "base/normalize";
+@import "base/colors";
+@import "typography/copy";
+@import "typography/headings";
+@import "layouts/page-home";
+@import "components/hero";
