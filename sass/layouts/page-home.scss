@@ -1,6 +1,6 @@
 .wrapper {
     width: 100%;
     > div {
-        border-bottom: 5px solid gold;
+        border-bottom: var(--rails);
     }
 }
