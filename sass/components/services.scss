@@ -1,0 +1,35 @@
+.services {
+	background-color: red;
+	display: flex;
+	&__left {
+		background-color: yellow;
+		flex: 2;
+	}
+	&__right {
+		background-color: green;
+		flex: 3;
+		padding: 2rem;
+		&--description {
+			border: var(--rails)
+		}
+		&--service {
+			border: var(--rails);
+			display: flex;
+			&--left {
+				border: var(--rails);
+				background-color: purple;
+				flex: 1;
+				display: flex;
+				justify-content: center;
+				img {
+					width: 100px;
+				}
+			}
+			&--right {
+				border: var(--rails);
+				background-color: crimson;
+				flex: 5;
+			}			
+		}
+	}
+}

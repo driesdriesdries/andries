@@ -44,7 +44,8 @@ html {
 
 :root {
   --color-primary: #BE431B;
-  --color-secondary: #F5F4E2; }
+  --color-secondary: #F5F4E2;
+  --rails: 1px solid black; }
 
 .primary-button {
   background-color: var(--color-primary);
@@ -99,9 +100,14 @@ h6 {
   /* 16px */ }
 
 .wrapper {
-  width: 100%; }
+  width: 100%;
+  background-color: aqua; }
   .wrapper > div {
     border-bottom: var(--rails); }
+  .wrapper .main-content {
+    background-color: white;
+    padding-bottom: 100rem;
+    padding: 3rem; }
 
 .hero {
   padding: 12rem 0 15rem 0;
@@ -134,7 +140,7 @@ h6 {
     border: var(--rails); }
     .logo-container__logo:last-child {
       margin-right: 0;
-      margin-left: -1rem; }
+      margin-left: -1.4rem; }
     .logo-container__logo--1 {
       background: url("images/logo-2chefs.png") no-repeat center center/contain;
       height: 5rem;
@@ -151,3 +157,31 @@ h6 {
       background: url("images/logo-edx.png") no-repeat center center/contain;
       height: 4rem;
       width: 7.7rem; }
+
+.services {
+  background-color: red;
+  display: flex; }
+  .services__left {
+    background-color: yellow;
+    flex: 2; }
+  .services__right {
+    background-color: green;
+    flex: 3;
+    padding: 2rem; }
+    .services__right--description {
+      border: var(--rails); }
+    .services__right--service {
+      border: var(--rails);
+      display: flex; }
+      .services__right--service--left {
+        border: var(--rails);
+        background-color: purple;
+        flex: 1;
+        display: flex;
+        justify-content: center; }
+        .services__right--service--left img {
+          width: 100px; }
+      .services__right--service--right {
+        border: var(--rails);
+        background-color: crimson;
+        flex: 5; }

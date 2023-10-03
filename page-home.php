@@ -7,7 +7,9 @@
 			<?php get_template_part( 'template-parts/home/banner' ); ?>
 		</div>
 		<div class="main-content">
-			main content
+			<?php get_template_part( 'template-parts/home/services' ); ?>
+			<h1>component2</h1>
+			<h1>component3</h1>
 		</div>
 	</div>
 <?php
