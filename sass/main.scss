@@ -25,7 +25,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @import "base/normalize";
 @import "base/colors";
+@import "base/buttons";
 @import "typography/copy";
 @import "typography/headings";
 @import "layouts/page-home";
 @import "components/hero";
+@import "components/banner";

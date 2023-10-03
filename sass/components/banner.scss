@@ -1,0 +1,38 @@
+.logo-container {
+	background-color: var(--color-secondary);
+	display: flex;
+	justify-content: center;
+	height: 100px;
+	align-items: center;
+	&__logo {
+		background-color: red;
+		align-content: center;
+		margin-right: 3rem;
+		mix-blend-mode: multiply;
+		justify-content: center;
+		border: 1px solid black;
+		&:last-child {
+			margin-right: 0;
+		}
+		&--1 {
+			background: url('images/logo-2chefs.png') no-repeat center center / contain;
+			height: 5rem;
+			width: 14.5rem;
+		}
+		&--2 {
+			background: url('images/logo-getsmarter.png') no-repeat center center / contain;
+			height: 5rem;
+			width: 14.5rem;
+		}
+		&--3 {
+			background: url('images/logo-2u.png') no-repeat center center / contain;
+			height: 5rem;
+			width: 14.5rem;
+		}
+		&--4 {
+			background: url('images/logo-edx.png') no-repeat center center / contain;
+			height: 5rem;
+			width: 14.5rem;
+		}
+	}
+}
