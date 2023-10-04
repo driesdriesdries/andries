@@ -5,7 +5,7 @@
     <div class="services__right">
         <div class="services__right--description">
             <h5>SERVICES</h5>
-            <h3>Some of the ways I can help you</h3>
+            <h3>Some of the ways</br><span class="text-accent">I can help you</span></h3>
         </div>
         
         <div class="services__right--service">
@@ -13,8 +13,8 @@
                 <img src="<?php echo get_theme_file_uri('images/andriesprofile.png'); ?>" alt="Profile Picture">
             </div>
             <div class="services__right--service--right">
-                <h5>General Consultation</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dolorum ratione. Exercitationem iste dolorum nam minus sunt! </p>
+                <h4>General Consultation</h4>
+                <p>With years of expertise in product strategy and digital innovation, I offer consultative services to drive business growth and optimize digital operations.</p>
             </div>
         </div>
         <div class="services__right--service">
@@ -22,8 +22,8 @@
                 <img src="<?php echo get_theme_file_uri('images/andriesprofile.png'); ?>" alt="Profile Picture">
             </div>
             <div class="services__right--service--right">
-                <h5>General Consultation</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dolorum ratione. Exercitationem iste dolorum nam minus sunt! </p>
+                <h4>Product Development</h4>
+                <p>The entire software development life-cycle and various aspects of product development are managed, including creative direction, copywriting, user interface design, as well as actual development and deployment.</p>
             </div>
         </div>
         <div class="services__right--service">
@@ -31,8 +31,8 @@
                 <img src="<?php echo get_theme_file_uri('images/andriesprofile.png'); ?>" alt="Profile Picture">
             </div>
             <div class="services__right--service--right">
-                <h5>General Consultation</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, dolorum ratione. Exercitationem iste dolorum nam minus sunt! </p>
+                <h4>Growth & Experimentation</h4>
+                <p>I execute data-driven growth strategies and web experimentation, optimizing user experience and increasing conversion rates.</p>
             </div>
         </div>
     </div>

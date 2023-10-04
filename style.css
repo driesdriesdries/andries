@@ -45,7 +45,11 @@ html {
 :root {
   --color-primary: #BE431B;
   --color-secondary: #F5F4E2;
-  --rails: 1px solid black; }
+  --color-tertiary: #45887A;
+  --shadow: 4px 4px 6px rgba(0, 0, 0, 0.2); }
+
+.text-accent {
+  color: var(--color-primary); }
 
 .primary-button {
   background-color: var(--color-primary);
@@ -84,11 +88,10 @@ h2 {
   font-weight: 100; }
 
 h3 {
-  font-size: 2rem;
-  /* 32px */ }
+  font-size: 3.2rem; }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   /* 24px */ }
 
 h5 {
@@ -100,14 +103,13 @@ h6 {
   /* 16px */ }
 
 .wrapper {
-  width: 100%;
-  background-color: aqua; }
+  width: 100%; }
   .wrapper > div {
     border-bottom: var(--rails); }
   .wrapper .main-content {
     background-color: white;
     padding-bottom: 100rem;
-    padding: 3rem; }
+    padding: 5rem; }
 
 .hero {
   padding: 12rem 0 15rem 0;
@@ -159,29 +161,41 @@ h6 {
       width: 7.7rem; }
 
 .services {
-  background-color: red;
   display: flex; }
   .services__left {
     background-color: yellow;
     flex: 2; }
   .services__right {
-    background-color: green;
     flex: 3;
     padding: 2rem; }
     .services__right--description {
       border: var(--rails); }
+      .services__right--description h5 {
+        color: var(--color-primary); }
     .services__right--service {
       border: var(--rails);
-      display: flex; }
+      display: flex;
+      padding: 2rem;
+      border-radius: 2.5rem;
+      margin-top: 2rem;
+      border: 3px solid var(--color-tertiary);
+      box-shadow: var(--shadow); }
       .services__right--service--left {
         border: var(--rails);
-        background-color: purple;
         flex: 1;
         display: flex;
         justify-content: center; }
         .services__right--service--left img {
-          width: 100px; }
+          width: 7rem;
+          height: 7rem;
+          align-self: center; }
       .services__right--service--right {
         border: var(--rails);
-        background-color: crimson;
-        flex: 5; }
+        flex: 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        .services__right--service--right h4 {
+          margin-bottom: .8rem; }
+        .services__right--service--right p {
+          margin-bottom: 0; }

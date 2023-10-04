@@ -1,5 +1,11 @@
 :root {
   --color-primary: #BE431B;
   --color-secondary: #F5F4E2;
-  --rails: 1px solid black;
+  --color-tertiary: #45887A;
+  //--rails: 1px solid black;
+  --shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+
+}
+.text-accent {
+  color: var(--color-primary);
 }
