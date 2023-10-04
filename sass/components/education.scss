@@ -1,0 +1,101 @@
+.education {
+	background-color: var(--color-secondary);
+	display: flex;
+	flex-direction: column;
+	margin-top: var(--main-space);
+	border-radius: var(--border-radius);	
+	padding: 2rem;
+	&__primary {
+		display: flex;
+		&__left {
+			flex: 2;
+			border: var(--rails);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			h5 {
+				color: var(--color-primary);
+			}
+		}
+		&__right {
+			flex: 3;
+			border: var(--rails);
+			padding: 10rem;
+			//background-color: green;
+			p {
+				font-size: 2rem;
+				margin-bottom: 0px;
+				font-weight: 100;
+			}
+		}
+	}
+	&__logos {
+		display: flex;
+		justify-content: space-around;
+		padding-bottom: 5rem;
+		flex-wrap: wrap;
+		&__badge {
+			padding:1rem 1.3rem;
+			background-color: white;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			box-shadow: var(--shadow);
+			border-radius: var(--border-radius);
+			p {
+				margin-top: 1rem;
+				border: var(--rails);
+				text-transform: uppercase;
+				margin-bottom: 0;
+				color: var(--color-dark-grey);
+				font-size: 1.1rem;
+				font-weight: 700;
+			}
+			span {
+				font-style: italic;
+				border: var(--rails);
+				color: var(--color-dark-grey);
+				font-size: 1.1rem;
+			}
+			&--logo {
+				mix-blend-mode: multiply;
+				border: var(--rails);
+				&--1 {
+					background: url(images/education-usb.png) no-repeat center center / contain;
+					height: 4rem;
+					width: 100%;
+				}
+				&--2 {
+					background: url(images/education-uct.png) no-repeat center center / contain;
+					height: 4rem;
+					width: 15rem;
+				}
+				&--3 {
+					background: url(images/education-mit.png) no-repeat center center / contain;
+					height: 4rem;
+					width: 15rem;
+				}
+				&--4 {
+					background: url(images/education-lse.png) no-repeat center center / contain;
+					height: 4rem;
+					width: 15rem;
+				}
+				&--5 {
+					background: url(images/education-oxford.png) no-repeat center center / contain;
+					height: 4rem;
+					width: 15rem;
+				}
+				&--6 {
+					background: url(images/education-harvard.png) no-repeat center center / contain;
+					height: 4rem;
+					width: 15rem;
+				}
+				&--7 {
+					background: url(images/education-nus.png) no-repeat center center / contain;
+					height: 4rem;
+					width: 15rem;
+				}
+			}
+		}
+	}
+}

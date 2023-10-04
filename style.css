@@ -46,7 +46,10 @@ html {
   --color-primary: #BE431B;
   --color-secondary: #F5F4E2;
   --color-tertiary: #45887A;
-  --shadow: 4px 4px 6px rgba(0, 0, 0, 0.2); }
+  --color-dark-grey: #9E9E9B;
+  --shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  --main-space: 5rem;
+  --border-radius: 2.5rem; }
 
 .text-accent {
   color: var(--color-primary); }
@@ -62,11 +65,12 @@ html {
   text-decoration: none; }
 
 * {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Raleway', sans-serif; }
 
 p {
   margin-bottom: 1.5em;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  line-height: 2.5rem; }
 
 li {
   font-size: 1.6rem;
@@ -79,16 +83,17 @@ i {
   font-style: italic; }
 
 h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   /* 48px */ }
 
 h2 {
-  font-size: 2.8rem;
+  font-size: 3.8rem;
   /* 40px */
-  font-weight: 100; }
+  font-weight: 700; }
 
 h3 {
-  font-size: 3.2rem; }
+  font-size: 3.2rem;
+  font-weight: 700; }
 
 h4 {
   font-size: 2.4rem;
@@ -109,7 +114,7 @@ h6 {
   .wrapper .main-content {
     background-color: white;
     padding-bottom: 100rem;
-    padding: 5rem; }
+    padding: var(--main-space); }
 
 .hero {
   padding: 12rem 0 15rem 0;
@@ -124,8 +129,8 @@ h6 {
     margin-top: 4rem;
     margin-bottom: 4rem;
     text-align: center;
-    padding-left: 35%;
-    padding-right: 35%; }
+    padding-left: 30%;
+    padding-right: 30%; }
 
 .logo-container {
   background-color: var(--color-secondary);
@@ -163,7 +168,7 @@ h6 {
 .services {
   display: flex; }
   .services__left {
-    background-color: yellow;
+    background: url(https://t4.ftcdn.net/jpg/05/76/02/47/360_F_576024722_DvSlFmRc21ZJgXVPQlyJGsxCBnqdEjwL.jpg) no-repeat center center/cover;
     flex: 2; }
   .services__right {
     flex: 3;
@@ -176,7 +181,7 @@ h6 {
       border: var(--rails);
       display: flex;
       padding: 2rem;
-      border-radius: 2.5rem;
+      border-radius: var(--border-radius);
       margin-top: 2rem;
       border: 3px solid var(--color-tertiary);
       box-shadow: var(--shadow); }
@@ -199,3 +204,86 @@ h6 {
           margin-bottom: .8rem; }
         .services__right--service--right p {
           margin-bottom: 0; }
+
+.education {
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--main-space);
+  border-radius: var(--border-radius);
+  padding: 2rem; }
+  .education__primary {
+    display: flex; }
+    .education__primary__left {
+      flex: 2;
+      border: var(--rails);
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .education__primary__left h5 {
+        color: var(--color-primary); }
+    .education__primary__right {
+      flex: 3;
+      border: var(--rails);
+      padding: 10rem; }
+      .education__primary__right p {
+        font-size: 2rem;
+        margin-bottom: 0px;
+        font-weight: 100; }
+  .education__logos {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 5rem;
+    flex-wrap: wrap; }
+    .education__logos__badge {
+      padding: 1rem 1.3rem;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: var(--shadow);
+      border-radius: var(--border-radius); }
+      .education__logos__badge p {
+        margin-top: 1rem;
+        border: var(--rails);
+        text-transform: uppercase;
+        margin-bottom: 0;
+        color: var(--color-dark-grey);
+        font-size: 1.1rem;
+        font-weight: 700; }
+      .education__logos__badge span {
+        font-style: italic;
+        border: var(--rails);
+        color: var(--color-dark-grey);
+        font-size: 1.1rem; }
+      .education__logos__badge--logo {
+        mix-blend-mode: multiply;
+        border: var(--rails); }
+        .education__logos__badge--logo--1 {
+          background: url(images/education-usb.png) no-repeat center center/contain;
+          height: 4rem;
+          width: 100%; }
+        .education__logos__badge--logo--2 {
+          background: url(images/education-uct.png) no-repeat center center/contain;
+          height: 4rem;
+          width: 15rem; }
+        .education__logos__badge--logo--3 {
+          background: url(images/education-mit.png) no-repeat center center/contain;
+          height: 4rem;
+          width: 15rem; }
+        .education__logos__badge--logo--4 {
+          background: url(images/education-lse.png) no-repeat center center/contain;
+          height: 4rem;
+          width: 15rem; }
+        .education__logos__badge--logo--5 {
+          background: url(images/education-oxford.png) no-repeat center center/contain;
+          height: 4rem;
+          width: 15rem; }
+        .education__logos__badge--logo--6 {
+          background: url(images/education-harvard.png) no-repeat center center/contain;
+          height: 4rem;
+          width: 15rem; }
+        .education__logos__badge--logo--7 {
+          background: url(images/education-nus.png) no-repeat center center/contain;
+          height: 4rem;
+          width: 15rem; }

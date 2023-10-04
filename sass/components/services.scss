@@ -1,8 +1,7 @@
 .services {
-	//background-color: red;
 	display: flex;
 	&__left {
-		background-color: yellow;
+		background: url(https://t4.ftcdn.net/jpg/05/76/02/47/360_F_576024722_DvSlFmRc21ZJgXVPQlyJGsxCBnqdEjwL.jpg) no-repeat center center / cover;
 		flex: 2;
 	}
 	&__right {
@@ -19,7 +18,7 @@
 			border: var(--rails);
 			display: flex;
 			padding: 2rem;
-			border-radius: 2.5rem;
+			border-radius: var(--border-radius);
 			margin-top: 2rem;
 			border: 3px solid var(--color-tertiary);
 			box-shadow: var(--shadow);
