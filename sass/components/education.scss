@@ -48,14 +48,14 @@
 				text-transform: uppercase;
 				margin-bottom: 0;
 				color: var(--color-dark-grey);
-				font-size: 1.1rem;
+				font-size: .9rem;
 				font-weight: 700;
 			}
 			span {
 				font-style: italic;
 				border: var(--rails);
 				color: var(--color-dark-grey);
-				font-size: 1.1rem;
+				font-size: 1rem;
 			}
 			&--logo {
 				mix-blend-mode: multiply;
@@ -63,7 +63,7 @@
 				&--1 {
 					background: url(images/education-usb.png) no-repeat center center / contain;
 					height: 4rem;
-					width: 100%;
+					width: 15rem;
 				}
 				&--2 {
 					background: url(images/education-uct.png) no-repeat center center / contain;

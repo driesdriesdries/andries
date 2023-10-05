@@ -1,0 +1,27 @@
+.testimonial {
+	padding: 8rem 2rem;
+	margin-top: var(--main-space);
+	background-color: var(--color-tertiary);
+	border-radius: var(--border-radius);
+	&__grid {
+		margin-top: 2rem;
+		display: flex;
+		gap: 2rem;
+		&__item {
+			border-radius: var(--border-radius);
+			background-color: white;
+			padding: 2rem;
+			display: flex;
+			flex: 1;
+			flex-direction: column;
+			justify-content: space-between;
+			.description {
+				text-align: center;
+			}
+			.details {
+				background-color: orangered;
+				text-align: center;
+			}
+		}
+	}
+}

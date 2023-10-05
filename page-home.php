@@ -9,7 +9,7 @@
 		<div class="main-content">
 			<?php get_template_part( 'template-parts/home/services' ); ?>
 			<?php get_template_part( 'template-parts/home/education' ); ?>
-			<h1>component3</h1>
+			<?php get_template_part( 'template-parts/home/testimonial' ); ?>
 		</div>
 	</div>
 <?php

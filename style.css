@@ -45,7 +45,7 @@ html {
 :root {
   --color-primary: #BE431B;
   --color-secondary: #F5F4E2;
-  --color-tertiary: #45887A;
+  --color-tertiary: #BDD6C7;
   --color-dark-grey: #9E9E9B;
   --shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
   --main-space: 5rem;
@@ -108,7 +108,12 @@ h6 {
   /* 16px */ }
 
 .wrapper {
-  width: 100%; }
+  width: 100%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  border: var(--rails);
+  margin: auto; }
   .wrapper > div {
     border-bottom: var(--rails); }
   .wrapper .main-content {
@@ -249,20 +254,20 @@ h6 {
         text-transform: uppercase;
         margin-bottom: 0;
         color: var(--color-dark-grey);
-        font-size: 1.1rem;
+        font-size: .9rem;
         font-weight: 700; }
       .education__logos__badge span {
         font-style: italic;
         border: var(--rails);
         color: var(--color-dark-grey);
-        font-size: 1.1rem; }
+        font-size: 1rem; }
       .education__logos__badge--logo {
         mix-blend-mode: multiply;
         border: var(--rails); }
         .education__logos__badge--logo--1 {
           background: url(images/education-usb.png) no-repeat center center/contain;
           height: 4rem;
-          width: 100%; }
+          width: 15rem; }
         .education__logos__badge--logo--2 {
           background: url(images/education-uct.png) no-repeat center center/contain;
           height: 4rem;
@@ -287,3 +292,26 @@ h6 {
           background: url(images/education-nus.png) no-repeat center center/contain;
           height: 4rem;
           width: 15rem; }
+
+.testimonial {
+  padding: 8rem 2rem;
+  margin-top: var(--main-space);
+  background-color: var(--color-tertiary);
+  border-radius: var(--border-radius); }
+  .testimonial__grid {
+    margin-top: 2rem;
+    display: flex;
+    gap: 2rem; }
+    .testimonial__grid__item {
+      border-radius: var(--border-radius);
+      background-color: white;
+      padding: 2rem;
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-between; }
+      .testimonial__grid__item .description {
+        text-align: center; }
+      .testimonial__grid__item .details {
+        background-color: orangered;
+        text-align: center; }
