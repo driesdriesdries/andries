@@ -1,4 +1,4 @@
-<div class="education">
+<div class="education fade-in">
     <div class="education__primary">
         <div class="education__primary__left">
             <h5>EDUCATION</h5>

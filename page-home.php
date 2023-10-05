@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 	<div class="wrapper">
-		<div class="hero">
+		<div class="hero fade-in">
 			<?php get_template_part( 'template-parts/home/hero' ); ?>
 		</div>
-		<div class="banner">
+		<div class="banner fade-in">
 			<?php get_template_part( 'template-parts/home/banner' ); ?>
 		</div>
 		<div class="main-content">

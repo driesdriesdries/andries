@@ -1,4 +1,4 @@
-<div class="testimonial">
+<div class="testimonial fade-in">
     <h5 class="text-accent">TESTIMONIALS</h5>
     <h3>What Others Say <br><span class="text-accent">About Me</span></h3>
     <div class="testimonial__grid">

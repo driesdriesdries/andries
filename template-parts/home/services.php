@@ -1,4 +1,4 @@
-<div class="services">
+<div class="services fade-in">
     <div class="services__left">
         <!-- <img class="services-image" src="https://t4.ftcdn.net/jpg/05/76/02/47/360_F_576024722_DvSlFmRc21ZJgXVPQlyJGsxCBnqdEjwL.jpg" alt="image describing services as a whole"> -->
     </div>
