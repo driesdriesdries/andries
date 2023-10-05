@@ -332,7 +332,7 @@ h6 {
           color: var(--color-darkest-grey);
           font-size: 1.1rem; }
 
-.fade-in, .education__logos__badge {
+.fade-in, .education__logos__badge, .services__right--service {
   opacity: 0;
   transition: opacity 1s ease-in-out; }
 

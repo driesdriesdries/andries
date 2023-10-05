@@ -6,13 +6,23 @@ document.addEventListener("DOMContentLoaded", function() {
 		  entry.target.classList.add('visible');
 		  observer.unobserve(entry.target);
   
-		  // If the faded-in section is the 'education' section, animate the badges
+		  // Animate badges in 'education' section
 		  if (entry.target.classList.contains('education')) {
 			const badges = entry.target.querySelectorAll('.education__logos__badge');
 			badges.forEach(function(badge, index) {
 			  setTimeout(function() {
 				badge.classList.add('visible');
-			  }, index * 400);  // 500ms delay between each badge
+			  }, index * 500);  // 500ms delay between each badge
+			});
+		  }
+  
+		  // Animate services in 'services' section
+		  if (entry.target.classList.contains('services')) {
+			const services = entry.target.querySelectorAll('.services__right--service');
+			services.forEach(function(service, index) {
+			  setTimeout(function() {
+				service.classList.add('visible');
+			  }, index * 500);  // 500ms delay between each service
 			});
 		  }
 		}
