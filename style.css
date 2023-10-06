@@ -334,12 +334,30 @@ h6 {
 .modal.active {
   height: 100vh;
   width: 100vw;
-  background-color: green;
+  background-color: var(--color-primary);
   position: fixed;
-  top: 0; }
-
-.modal__inner {
-  background-color: yellow; }
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modal.active .modal__inner {
+    height: 80vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-secondary); }
+    .modal.active .modal__inner__header {
+      background-color: azure;
+      text-align: right;
+      font-size: 3rem;
+      padding-right: 1rem; }
+      .modal.active .modal__inner__header .close {
+        cursor: pointer; }
+    .modal.active .modal__inner__body {
+      background-color: bisque; }
+    .modal.active .modal__inner p {
+      cursor: pointer;
+      background-color: teal; }
 
 .fade-in, .education__logos__badge, .services__right--service, .testimonial__grid__item {
   opacity: 0;
