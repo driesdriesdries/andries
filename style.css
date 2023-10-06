@@ -14,20 +14,16 @@ Text Domain: Andries
 */
 html {
   line-height: 1.15;
-  -webkit-text-size-adjust: 100%; }
-
-* {
-  margin: 0;
-  padding: 0; }
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font-size: 62.5%; }
 
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit; }
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%; }
 
 ::selection {
   background-color: var(--color-primary);
@@ -115,7 +111,7 @@ h6 {
     padding: var(--main-space); }
 
 .hero {
-  padding: 12rem 0 15rem 0;
+  padding: 12rem 0 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,11 +120,9 @@ h6 {
     width: 20rem;
     height: 20rem; }
   .hero h2 {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
+    margin: 4rem 0;
     text-align: center;
-    padding-left: 30%;
-    padding-right: 30%; }
+    padding: 0 30%; }
 
 .logo-container {
   background-color: var(--color-secondary);
@@ -166,8 +160,8 @@ h6 {
 .services {
   display: flex; }
   .services__left {
-    background: url(https://t4.ftcdn.net/jpg/05/76/02/47/360_F_576024722_DvSlFmRc21ZJgXVPQlyJGsxCBnqdEjwL.jpg) no-repeat center center/cover;
-    flex: 2; }
+    flex: 2;
+    background: url(https://t4.ftcdn.net/jpg/05/76/02/47/360_F_576024722_DvSlFmRc21ZJgXVPQlyJGsxCBnqdEjwL.jpg) no-repeat center center/cover; }
   .services__right {
     flex: 3;
     padding: 2rem; }
@@ -176,16 +170,15 @@ h6 {
       .services__right--description h5 {
         color: var(--color-primary); }
     .services__right--service {
-      border: var(--rails);
-      display: flex;
       padding: 2rem;
-      border-radius: var(--border-radius);
       margin-top: 2rem;
+      border-radius: var(--border-radius);
       border: 3px solid var(--color-tertiary);
-      box-shadow: var(--shadow); }
+      box-shadow: var(--shadow);
+      display: flex; }
       .services__right--service--left {
-        border: var(--rails);
         flex: 1;
+        border: var(--rails);
         display: flex;
         justify-content: center; }
         .services__right--service--left img {
@@ -193,8 +186,8 @@ h6 {
           height: 7rem;
           align-self: center; }
       .services__right--service--right {
-        border: var(--rails);
         flex: 5;
+        border: var(--rails);
         display: flex;
         flex-direction: column;
         justify-content: center; }

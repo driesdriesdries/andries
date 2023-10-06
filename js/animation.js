@@ -1,57 +1,43 @@
 document.addEventListener("DOMContentLoaded", function() {
-	// Function to handle the intersection
-	function handleIntersection(entries, observer) {
-	  entries.forEach(function(entry) {
-		if (entry.isIntersecting) {
-		  entry.target.classList.add('visible');
-		  observer.unobserve(entry.target);
-  
-		  // Animate badges in 'education' section
-		  if (entry.target.classList.contains('education')) {
-			const badges = entry.target.querySelectorAll('.education__logos__badge');
-			badges.forEach(function(badge, index) {
-			  setTimeout(function() {
-				badge.classList.add('visible');
-			  }, index * 500);  // 500ms delay between each badge
-			});
-		  }
-  
-		  // Animate services in 'services' section
-		  if (entry.target.classList.contains('services')) {
-			const services = entry.target.querySelectorAll('.services__right--service');
-			services.forEach(function(service, index) {
-			  setTimeout(function() {
-				service.classList.add('visible');
-			  }, index * 500);  // 500ms delay between each service
-			});
-		  }
-  
-		  // Animate testimonials in 'testimonial' section
-		  if (entry.target.classList.contains('testimonial')) {
-			const testimonials = entry.target.querySelectorAll('.testimonial__grid__item');
-			testimonials.forEach(function(testimonial, index) {
-			  setTimeout(function() {
-				testimonial.classList.add('visible');
-			  }, index * 1000);  // 1000ms delay between each testimonial
-			});
-		  }
-		}
-	  });
-	}
-  
-	// Initialize Intersection Observer
-	const options = {
-	  root: null,
-	  rootMargin: '0px',
-	  threshold: 0.1
-	};
-  
-	const observer = new IntersectionObserver(handleIntersection, options);
-  
-	// Target elements to observe
-	const targets = document.querySelectorAll('.fade-in');
-	targets.forEach(function(target) {
-	  observer.observe(target);
-	});
-  });
-  
+    // Function to handle the intersection
+    function handleIntersection(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+                animateElements(entry.target);
+            }
+        });
+    }
+
+    function animateElements(target) {
+        let elements = [];
+        let delay = 500;
+
+        if (target.classList.contains('education')) {
+            elements = target.querySelectorAll('.education__logos__badge');
+        } else if (target.classList.contains('services')) {
+            elements = target.querySelectorAll('.services__right--service');
+        } else if (target.classList.contains('testimonial')) {
+            elements = target.querySelectorAll('.testimonial__grid__item');
+            delay = 1000;
+        }
+
+        elements.forEach((element, index) => {
+            setTimeout(() => {
+                element.classList.add('visible');
+            }, index * delay);
+        });
+    }
+
+    // Initialize Intersection Observer
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+    const targets = document.querySelectorAll('.fade-in');
+    targets.forEach(target => observer.observe(target));
+});

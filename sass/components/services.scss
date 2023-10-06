@@ -1,53 +1,56 @@
 .services {
-	display: flex;
-	&__left {
-		background: url(https://t4.ftcdn.net/jpg/05/76/02/47/360_F_576024722_DvSlFmRc21ZJgXVPQlyJGsxCBnqdEjwL.jpg) no-repeat center center / cover;
-		flex: 2;
-	}
-	&__right {
-		//background-color: green;
-		flex: 3;
-		padding: 2rem;
-		&--description {
-			border: var(--rails);
-			h5 {
-				color: var(--color-primary);
-			}
-		}
-		&--service {
-			border: var(--rails);
-			display: flex;
-			padding: 2rem;
-			border-radius: var(--border-radius);
-			margin-top: 2rem;
-			border: 3px solid var(--color-tertiary);
-			box-shadow: var(--shadow);
-			&--left {
-				border: var(--rails);
-				//background-color: purple;
-				flex: 1;
-				display: flex;
-				justify-content: center;
-				img {
-					width: 7rem;
-					height: 7rem;
-					align-self: center;
-				}
-			}
-			&--right {
-				border: var(--rails);
-				//background-color: crimson;
-				flex: 5;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				h4 {
-					margin-bottom: .8rem;
-				}
-				p {
-					margin-bottom: 0;
-				}
-			}			
-		}
-	}
+    display: flex;
+
+    &__left {
+        flex: 2;
+        background: url(https://t4.ftcdn.net/jpg/05/76/02/47/360_F_576024722_DvSlFmRc21ZJgXVPQlyJGsxCBnqdEjwL.jpg) no-repeat center center / cover;
+    }
+
+    &__right {
+        flex: 3;
+        padding: 2rem;
+        
+        &--description {
+            border: var(--rails);
+            h5 {
+                color: var(--color-primary);
+            }
+        }
+
+        &--service {
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: var(--border-radius);
+            border: 3px solid var(--color-tertiary);
+            box-shadow: var(--shadow);
+            display: flex;
+
+            &--left {
+                flex: 1;
+                border: var(--rails);
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 7rem;
+                    height: 7rem;
+                    align-self: center;
+                }
+            }
+
+            &--right {
+                flex: 5;
+                border: var(--rails);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h4 {
+                    margin-bottom: .8rem;
+                }
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
 }
