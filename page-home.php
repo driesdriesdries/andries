@@ -10,6 +10,9 @@
 			<?php get_template_part( 'template-parts/home/services' ); ?>
 			<?php get_template_part( 'template-parts/home/education' ); ?>
 			<?php get_template_part( 'template-parts/home/testimonial' ); ?>
+			<?php get_template_part( 'template-parts/home/callout' ); ?>
 		</div>
 	</div>
 <?php
+
+get_footer();

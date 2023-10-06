@@ -1,25 +1,16 @@
 /*!
 Theme Name: Andries
-Theme URI: http://underscores.me/
+Theme URI: http://andries.io/
 Author: Andries
-Author URI: http://underscores.me/
+Author URI: http://andries.io/
 Description: Andries Portfolio Template
 Version: 1.0.0
 Tested up to: 5.4
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: andries
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Text Domain: Andries
 
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned.
-
-Andries is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 html {
   line-height: 1.15;
@@ -58,7 +49,7 @@ html {
   background-color: var(--color-primary);
   padding: 2rem 2rem;
   color: white;
-  display: block;
+  display: inline-block;
   border-radius: 5rem;
   font-size: 2.4rem;
   font-weight: bold;
@@ -332,7 +323,25 @@ h6 {
           color: var(--color-darkest-grey);
           font-size: 1.1rem; }
 
-.fade-in, .education__logos__badge, .services__right--service {
+.callout {
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .callout h3 {
+    margin-bottom: 2rem; }
+
+.modal.active {
+  height: 100vh;
+  width: 100vw;
+  background-color: green;
+  position: fixed;
+  top: 0; }
+
+.modal__inner {
+  background-color: yellow; }
+
+.fade-in, .education__logos__badge, .services__right--service, .testimonial__grid__item {
   opacity: 0;
   transition: opacity 1s ease-in-out; }
 

@@ -25,6 +25,16 @@ document.addEventListener("DOMContentLoaded", function() {
 			  }, index * 500);  // 500ms delay between each service
 			});
 		  }
+  
+		  // Animate testimonials in 'testimonial' section
+		  if (entry.target.classList.contains('testimonial')) {
+			const testimonials = entry.target.querySelectorAll('.testimonial__grid__item');
+			testimonials.forEach(function(testimonial, index) {
+			  setTimeout(function() {
+				testimonial.classList.add('visible');
+			  }, index * 1000);  // 1000ms delay between each testimonial
+			});
+		  }
 		}
 	  });
 	}
