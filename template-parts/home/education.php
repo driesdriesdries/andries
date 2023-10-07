@@ -5,7 +5,7 @@
             <h3>Academic Degree and </br><span class="text-accent">Professional Certifications</span></h3>
         </div>
         <div class="education__primary__right">
-            <p>With nearly two decades in tech, I've worked hands-on in UX/UI design, web development, SEO, and conversion rate optimization. My strategic insights as a Director of Product at a NASDAQ listed company, paired with practical expertise, empower me to uplift small to medium-sized businesses with actionable advice or bespoke web solutions. <b class="text-accent">Pretty much like the one you are looking at right now.</b></p>
+            <p>With nearly two decades in tech, I've worked hands-on in UX/UI design, web development, SEO, and conversion rate optimization. My strategic insights as a Director of Product at a NASDAQ listed company, paired with practical expertise, empower me to uplift small to medium-sized businesses with actionable advice or bespoke web solutions.</p>
         </div>
     </div>
     <div class="education__logos">

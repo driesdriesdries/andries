@@ -13,6 +13,10 @@
 		display: flex;
 		flex-direction: column;
 		background-color: var(--color-secondary);
+		@media only screen and (max-width:$bp-medium) {
+			width: 85vw;
+			height: 90vh;
+		}
 		&__header {
 			background-color: azure;
 			text-align: right;

@@ -3,10 +3,18 @@
 	margin-top: var(--main-space);
 	background-color: var(--color-tertiary);
 	border-radius: var(--border-radius);
+	h5, h3 {
+		@media only screen and (max-width:$bp-medium) {
+			text-align: center;
+		}
+	}
 	&__grid {
 		margin-top: 2rem;
 		display: flex;
 		gap: 2rem;
+		@media only screen and (max-width:$bp-medium) {
+			flex-direction: column;
+		}
 		&__item {
 			border-radius: var(--border-radius);
 			background-color: white;

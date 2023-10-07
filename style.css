@@ -82,10 +82,16 @@ h2 {
   font-size: 3.8rem;
   /* 40px */
   font-weight: 700; }
+  @media only screen and (max-width: 56.25em) {
+    h2 {
+      font-size: 2.8rem; } }
 
 h3 {
   font-size: 3.2rem;
   font-weight: 700; }
+  @media only screen and (max-width: 56.25em) {
+    h3 {
+      font-size: 2.5rem; } }
 
 h4 {
   font-size: 2.4rem;
@@ -139,7 +145,6 @@ h6 {
     @media only screen and (max-width: 56.25em) {
       .hero h2 {
         padding: 0;
-        font-size: 2.5rem;
         margin: 2.5rem 0; } }
 
 .logo-container {
@@ -196,7 +201,8 @@ h6 {
   display: flex; }
   @media only screen and (max-width: 56.25em) {
     .services {
-      flex-direction: column; } }
+      flex-direction: column;
+      padding-top: 3rem; } }
   .services__left {
     flex: 2;
     background: url(https://t4.ftcdn.net/jpg/05/76/02/47/360_F_576024722_DvSlFmRc21ZJgXVPQlyJGsxCBnqdEjwL.jpg) no-repeat center center/cover; }
@@ -249,8 +255,14 @@ h6 {
   margin-top: var(--main-space);
   border-radius: var(--border-radius);
   padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .education {
+      padding-top: 5rem; } }
   .education__primary {
     display: flex; }
+    @media only screen and (max-width: 56.25em) {
+      .education__primary {
+        text-align: center; } }
     @media only screen and (max-width: 56.25em) {
       .education__primary {
         flex-direction: column; } }
@@ -260,9 +272,6 @@ h6 {
       display: flex;
       flex-direction: column;
       justify-content: center; }
-      @media only screen and (max-width: 56.25em) {
-        .education__primary__left {
-          text-align: center; } }
       .education__primary__left h5 {
         color: var(--color-primary); }
     .education__primary__right {
@@ -289,6 +298,9 @@ h6 {
       align-items: center;
       box-shadow: var(--shadow);
       border-radius: var(--border-radius); }
+      @media only screen and (max-width: 56.25em) {
+        .education__logos__badge {
+          margin-bottom: 1.5rem; } }
       .education__logos__badge p {
         margin-top: 1rem;
         border: var(--rails);
@@ -339,10 +351,16 @@ h6 {
   margin-top: var(--main-space);
   background-color: var(--color-tertiary);
   border-radius: var(--border-radius); }
+  @media only screen and (max-width: 56.25em) {
+    .testimonial h5, .testimonial h3 {
+      text-align: center; } }
   .testimonial__grid {
     margin-top: 2rem;
     display: flex;
     gap: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .testimonial__grid {
+        flex-direction: column; } }
     .testimonial__grid__item {
       border-radius: var(--border-radius);
       background-color: white;
@@ -373,11 +391,21 @@ h6 {
 
 .callout {
   padding: 10rem;
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center; }
+  @media only screen and (max-width: 56.25em) {
+    .callout {
+      padding-top: 5rem;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 5rem; } }
   .callout h3 {
     margin-bottom: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .callout h3 {
+        text-align: center; } }
 
 .modal.active {
   height: 100vh;
@@ -394,6 +422,10 @@ h6 {
     display: flex;
     flex-direction: column;
     background-color: var(--color-secondary); }
+    @media only screen and (max-width: 56.25em) {
+      .modal.active .modal__inner {
+        width: 85vw;
+        height: 90vh; } }
     .modal.active .modal__inner__header {
       background-color: azure;
       text-align: right;

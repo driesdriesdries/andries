@@ -1,8 +1,8 @@
 .services {
     display: flex;
     @media only screen and (max-width:$bp-medium) {
-        //background-color: aqua;
         flex-direction: column;
+        padding-top: 3rem;
     }
 
     &__left {
