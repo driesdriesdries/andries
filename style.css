@@ -12,23 +12,6 @@ License URI: LICENSE
 Text Domain: Andries
 
 */
-html {
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
-  box-sizing: border-box;
-  font-size: 62.5%; }
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-::selection {
-  background-color: var(--color-primary);
-  color: white; }
-
 :root {
   --color-primary: #BE431B;
   --color-secondary: #F5F4E2;
@@ -40,6 +23,26 @@ html {
 
 .text-accent {
   color: var(--color-primary); }
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+::selection {
+  background-color: var(--color-primary);
+  color: white; }
 
 .primary-button {
   background-color: var(--color-primary);
@@ -109,6 +112,9 @@ h6 {
     background-color: white;
     padding-bottom: 100rem;
     padding: var(--main-space); }
+    @media only screen and (max-width: 56.25em) {
+      .wrapper .main-content {
+        padding: 0; } }
 
 .hero {
   padding: 12rem 0 15rem;
@@ -116,20 +122,37 @@ h6 {
   flex-direction: column;
   align-items: center;
   background: url(images/header.png) no-repeat center center/cover; }
+  @media only screen and (max-width: 56.25em) {
+    .hero {
+      padding: 5rem 0 5rem 0; } }
   .hero img {
     width: 20rem;
     height: 20rem; }
+    @media only screen and (max-width: 56.25em) {
+      .hero img {
+        width: 11rem;
+        height: 11rem; } }
   .hero h2 {
     margin: 4rem 0;
     text-align: center;
     padding: 0 30%; }
+    @media only screen and (max-width: 56.25em) {
+      .hero h2 {
+        padding: 0;
+        font-size: 2.5rem;
+        margin: 2.5rem 0; } }
 
 .logo-container {
   background-color: var(--color-secondary);
   display: flex;
   justify-content: center;
-  height: 100px;
+  height: 10rem;
   align-items: center; }
+  @media only screen and (max-width: 56.25em) {
+    .logo-container {
+      height: 7rem;
+      padding-left: 2rem;
+      padding-right: 2rem; } }
   .logo-container__logo {
     background-color: red;
     align-content: center;
@@ -144,31 +167,47 @@ h6 {
       background: url("images/logo-2chefs.png") no-repeat center center/contain;
       height: 5rem;
       width: 11rem; }
+      @media only screen and (max-width: 56.25em) {
+        .logo-container__logo--1 {
+          height: 3.5rem; } }
     .logo-container__logo--2 {
       background: url("images/logo-getsmarter.png") no-repeat center center/contain;
       height: 5rem;
       width: 8.9rem; }
+      @media only screen and (max-width: 56.25em) {
+        .logo-container__logo--2 {
+          height: 3.5rem; } }
     .logo-container__logo--3 {
       background: url("images/logo-2u.png") no-repeat center center/contain;
       height: 5rem;
       width: 3.9rem; }
+      @media only screen and (max-width: 56.25em) {
+        .logo-container__logo--3 {
+          height: 3.5rem; } }
     .logo-container__logo--4 {
       background: url("images/logo-edx.png") no-repeat center center/contain;
       height: 4rem;
       width: 7.7rem; }
+      @media only screen and (max-width: 56.25em) {
+        .logo-container__logo--4 {
+          height: 3.5rem; } }
 
 .services {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .services {
+      flex-direction: column; } }
   .services__left {
     flex: 2;
     background: url(https://t4.ftcdn.net/jpg/05/76/02/47/360_F_576024722_DvSlFmRc21ZJgXVPQlyJGsxCBnqdEjwL.jpg) no-repeat center center/cover; }
   .services__right {
     flex: 3;
     padding: 2rem; }
-    .services__right--description {
-      border: var(--rails); }
-      .services__right--description h5 {
-        color: var(--color-primary); }
+    @media only screen and (max-width: 56.25em) {
+      .services__right--description {
+        text-align: center; } }
+    .services__right--description h5 {
+      color: var(--color-primary); }
     .services__right--service {
       padding: 2rem;
       margin-top: 2rem;
@@ -176,6 +215,9 @@ h6 {
       border: 3px solid var(--color-tertiary);
       box-shadow: var(--shadow);
       display: flex; }
+      @media only screen and (max-width: 56.25em) {
+        .services__right--service {
+          flex-direction: column; } }
       .services__right--service--left {
         flex: 1;
         border: var(--rails);
@@ -191,6 +233,10 @@ h6 {
         display: flex;
         flex-direction: column;
         justify-content: center; }
+        @media only screen and (max-width: 56.25em) {
+          .services__right--service--right {
+            text-align: center;
+            margin-top: 1rem; } }
         .services__right--service--right h4 {
           margin-bottom: .8rem; }
         .services__right--service--right p {
@@ -205,18 +251,27 @@ h6 {
   padding: 2rem; }
   .education__primary {
     display: flex; }
+    @media only screen and (max-width: 56.25em) {
+      .education__primary {
+        flex-direction: column; } }
     .education__primary__left {
       flex: 2;
       border: var(--rails);
       display: flex;
       flex-direction: column;
       justify-content: center; }
+      @media only screen and (max-width: 56.25em) {
+        .education__primary__left {
+          text-align: center; } }
       .education__primary__left h5 {
         color: var(--color-primary); }
     .education__primary__right {
       flex: 3;
       border: var(--rails);
       padding: 10rem; }
+      @media only screen and (max-width: 56.25em) {
+        .education__primary__right {
+          padding: 3rem; } }
       .education__primary__right p {
         font-size: 2rem;
         margin-bottom: 0px;

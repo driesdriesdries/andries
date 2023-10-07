@@ -7,12 +7,18 @@
 	padding: 2rem;
 	&__primary {
 		display: flex;
+		@media only screen and (max-width:$bp-medium) {
+			flex-direction: column;
+		}
 		&__left {
 			flex: 2;
 			border: var(--rails);
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
+			@media only screen and (max-width:$bp-medium) {
+				text-align: center;
+			}
 			h5 {
 				color: var(--color-primary);
 			}
@@ -21,7 +27,9 @@
 			flex: 3;
 			border: var(--rails);
 			padding: 10rem;
-			//background-color: green;
+			@media only screen and (max-width:$bp-medium) {
+				padding: 3rem;
+			}
 			p {
 				font-size: 2rem;
 				margin-bottom: 0px;
