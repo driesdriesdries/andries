@@ -7,7 +7,7 @@
 
     &__left {
         flex: 2;
-        background: url(https://t4.ftcdn.net/jpg/05/76/02/47/360_F_576024722_DvSlFmRc21ZJgXVPQlyJGsxCBnqdEjwL.jpg) no-repeat center center / cover;
+        background: url(images/services-exposition.png) no-repeat center center / cover;
     }
 
     &__right {
@@ -36,14 +36,14 @@
             }
 
             &--left {
-                flex: 1;
+                flex: 2;
                 border: var(--rails);
                 display: flex;
                 justify-content: center;
 
                 img {
-                    width: 7rem;
-                    height: 7rem;
+                    width: 12.5rem;
+                    height: 12.5rem;
                     align-self: center;
                 }
             }

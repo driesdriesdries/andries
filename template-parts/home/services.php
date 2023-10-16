@@ -10,7 +10,7 @@
         
         <div class="services__right--service">
             <div class="services__right--service--left">
-                <img src="<?php echo get_theme_file_uri('images/andriesprofile.png'); ?>" alt="Profile Picture">
+                <img src="<?php echo get_theme_file_uri('images/services-consultation.png'); ?>" alt="Profile Picture">
             </div>
             <div class="services__right--service--right">
                 <h4>General Consultation</h4>
@@ -19,7 +19,7 @@
         </div>
         <div class="services__right--service">
             <div class="services__right--service--left">
-                <img src="<?php echo get_theme_file_uri('images/andriesprofile.png'); ?>" alt="Profile Picture">
+                <img src="<?php echo get_theme_file_uri('images/services-product-development.png'); ?>" alt="Profile Picture">
             </div>
             <div class="services__right--service--right">
                 <h4>Product Development</h4>
@@ -28,7 +28,7 @@
         </div>
         <div class="services__right--service">
             <div class="services__right--service--left">
-                <img src="<?php echo get_theme_file_uri('images/andriesprofile.png'); ?>" alt="Profile Picture">
+                <img src="<?php echo get_theme_file_uri('images/services-experimentation.png'); ?>" alt="Profile Picture">
             </div>
             <div class="services__right--service--right">
                 <h4>Growth & Experimentation</h4>

@@ -127,7 +127,7 @@ h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: url(images/header.png) no-repeat center center/cover; }
+  background: url(images/header.jpg) no-repeat center center/cover; }
   @media only screen and (max-width: 56.25em) {
     .hero {
       padding: 5rem 0 5rem 0; } }
@@ -141,7 +141,7 @@ h6 {
   .hero h2 {
     margin: 4rem 0;
     text-align: center;
-    padding: 0 30%; }
+    padding: 0 27%; }
     @media only screen and (max-width: 56.25em) {
       .hero h2 {
         padding: 0;
@@ -205,7 +205,7 @@ h6 {
       padding-top: 3rem; } }
   .services__left {
     flex: 2;
-    background: url(https://t4.ftcdn.net/jpg/05/76/02/47/360_F_576024722_DvSlFmRc21ZJgXVPQlyJGsxCBnqdEjwL.jpg) no-repeat center center/cover; }
+    background: url(images/services-exposition.png) no-repeat center center/cover; }
   .services__right {
     flex: 3;
     padding: 2rem; }
@@ -225,13 +225,13 @@ h6 {
         .services__right--service {
           flex-direction: column; } }
       .services__right--service--left {
-        flex: 1;
+        flex: 2;
         border: var(--rails);
         display: flex;
         justify-content: center; }
         .services__right--service--left img {
-          width: 7rem;
-          height: 7rem;
+          width: 12.5rem;
+          height: 12.5rem;
           align-self: center; }
       .services__right--service--right {
         flex: 5;
