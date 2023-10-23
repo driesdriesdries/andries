@@ -62,17 +62,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php endif; ?>
 
     <form action="contact.php" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
-
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message here..." required></textarea><br><br>
-                
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required><br><br>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" placeholder="Type your message here..." required></textarea><br><br>
+        </div>
         <div class="newsletter-box">
-            <label for="newsletter">Sign up for the newsletter</label>
+            <label for="newsletter">Sign up for my newsletter</label>
             <input type="checkbox" id="newsletter" name="newsletter" value="yes">
         </div>
         

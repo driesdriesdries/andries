@@ -1,11 +1,12 @@
 .modal__inner {
 	form {
-		// background-color: red;
+		padding: 2rem;
+		.form-group {
+			margin-bottom: 1.5rem;
+		}
 		input#name,input#email, textarea{
 			width: 100%;
 			padding: 1.5rem;
-			// background-color: red;
-			
 		}
 		input#newsletter {
 			margin-left: 1rem;
@@ -18,7 +19,7 @@
 		}
 
 		label {
-			padding-left: 1.5rem;
+			// padding-left: 1.5rem;
 			// background-color: yellow;
 			font-weight: bold;
 			font-size: 1.6rem;

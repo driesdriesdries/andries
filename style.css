@@ -19,8 +19,7 @@ Text Domain: Andries
   --color-dark-grey: #2f2f2f;
   --shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
   --main-space: 5rem;
-  --border-radius: 2.5rem;
-  --rails: 1px solid black; }
+  --border-radius: 2.5rem; }
 
 .text-accent {
   color: var(--color-primary); }
@@ -418,7 +417,7 @@ h6 {
   justify-content: center;
   align-items: center; }
   .modal.active .modal__inner {
-    height: 80vh;
+    height: 60vh;
     width: 50vw;
     display: flex;
     flex-direction: column;
@@ -427,7 +426,7 @@ h6 {
     @media only screen and (max-width: 56.25em) {
       .modal.active .modal__inner {
         width: 85vw;
-        height: 90vh; } }
+        height: 70vh; } }
     .modal.active .modal__inner__header {
       text-align: right;
       font-size: 3rem;
@@ -440,25 +439,24 @@ h6 {
       cursor: pointer;
       background-color: teal; }
 
-.modal__inner form input#name, .modal__inner form input#email, .modal__inner form textarea {
-  width: 100%;
-  padding: 1.5rem; }
-
-.modal__inner form input#newsletter {
-  margin-left: 1rem; }
-
-.modal__inner form input#submit-contact {
-  background-color: var(--color-primary);
-  margin-top: 2rem;
-  border: none; }
-
-.modal__inner form label {
-  padding-left: 1.5rem;
-  font-weight: bold;
-  font-size: 1.6rem; }
-
-.modal__inner form .newsletter-box {
-  display: flex; }
+.modal__inner form {
+  padding: 2rem; }
+  .modal__inner form .form-group {
+    margin-bottom: 1.5rem; }
+  .modal__inner form input#name, .modal__inner form input#email, .modal__inner form textarea {
+    width: 100%;
+    padding: 1.5rem; }
+  .modal__inner form input#newsletter {
+    margin-left: 1rem; }
+  .modal__inner form input#submit-contact {
+    background-color: var(--color-primary);
+    margin-top: 2rem;
+    border: none; }
+  .modal__inner form label {
+    font-weight: bold;
+    font-size: 1.6rem; }
+  .modal__inner form .newsletter-box {
+    display: flex; }
 
 .fade-in, .education__logos__badge, .services__right--service, .testimonial__grid__item {
   opacity: 0;
