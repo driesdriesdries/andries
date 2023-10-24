@@ -157,6 +157,14 @@ function andries_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'andries_scripts' );
 
+function mytheme_add_favicon() {
+	// Favicon for older browsers.
+	echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/favicon.ico" >';
+
+ }
+ add_action('wp_head', 'mytheme_add_favicon');
+ 
+
 /**
  * Implement the Custom Header feature.
  */
