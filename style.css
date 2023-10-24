@@ -407,56 +407,47 @@ h6 {
       .callout h3 {
         text-align: center; } }
 
-.modal.active {
-  height: 100vh;
-  width: 100vw;
+.modal-window.active {
   background-color: var(--color-secondary);
   position: fixed;
   top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center; }
-  .modal.active .modal__inner {
-    height: 60vh;
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .modal-window.active .modal-inner {
+    border-radius: var(--border-radius);
+    padding: 2rem;
     background-color: white;
-    border: var(--rails); }
+    width: 40%;
+    box-shadow: var(--shadow);
+    margin-top: -10rem; }
     @media only screen and (max-width: 56.25em) {
-      .modal.active .modal__inner {
-        width: 85vw;
-        height: 70vh; } }
-    .modal.active .modal__inner__header {
-      text-align: right;
-      font-size: 3rem;
-      padding-right: 1rem; }
-      .modal.active .modal__inner__header .close {
+      .modal-window.active .modal-inner {
+        width: 100%; } }
+    .modal-window.active .modal-inner__header {
+      display: flex;
+      justify-content: space-between; }
+      .modal-window.active .modal-inner__header h3 {
+        margin-bottom: 2rem; }
+      .modal-window.active .modal-inner__header span {
+        font-size: 3.2rem;
         cursor: pointer; }
-    .modal.active .modal__inner__body {
-      background-color: bisque; }
-    .modal.active .modal__inner p {
-      cursor: pointer;
-      background-color: teal; }
-
-.modal__inner form {
-  padding: 2rem; }
-  .modal__inner form .form-group {
-    margin-bottom: 1.5rem; }
-  .modal__inner form input#name, .modal__inner form input#email, .modal__inner form textarea {
-    width: 100%;
-    padding: 1.5rem; }
-  .modal__inner form input#newsletter {
-    margin-left: 1rem; }
-  .modal__inner form input#submit-contact {
-    background-color: var(--color-primary);
-    margin-top: 2rem;
-    border: none; }
-  .modal__inner form label {
-    font-weight: bold;
-    font-size: 1.6rem; }
-  .modal__inner form .newsletter-box {
-    display: flex; }
+    .modal-window.active .modal-inner input, .modal-window.active .modal-inner textarea {
+      width: 100%;
+      padding: 1rem; }
+    .modal-window.active .modal-inner .wpcf7-submit {
+      background-color: var(--color-primary);
+      border: none;
+      color: white;
+      border-radius: var(--border-radius);
+      width: 13rem;
+      padding-top: 1.1rem;
+      padding-bottom: 1.1rem;
+      font-size: 2.5rem;
+      font-weight: 700; }
 
 .fade-in, .education__logos__badge, .services__right--service, .testimonial__grid__item {
   opacity: 0;
