@@ -1,0 +1,71 @@
+.services {
+    display: flex;
+    @media only screen and (max-width:$bp-medium) {
+        flex-direction: column;
+        padding-top: 3rem;
+    }
+
+    &__left {
+        flex: 2;
+        background: url(images/services-exposition.png) no-repeat center center / cover;
+    }
+
+    &__right {
+        flex: 3;
+        padding: 2rem;
+        
+        &--description {
+            @media only screen and (max-width:$bp-medium) {
+                text-align: center;
+            }
+            h5 {
+                color: var(--color-primary);
+            }
+        }
+
+        &--service {
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: var(--border-radius);
+            border: 3px solid var(--color-tertiary);
+            box-shadow: var(--shadow);
+            display: flex;
+            @media only screen and (max-width:$bp-medium) {
+                //background-color: cream;
+                flex-direction: column;
+            }
+
+            &--left {
+                flex: 2;
+                border: var(--rails);
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: 12.5rem;
+                    height: 12.5rem;
+                    align-self: center;
+                }
+            }
+
+            &--right {
+                flex: 5;
+                border: var(--rails);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                @media only screen and (max-width:$bp-medium) {
+                    //background-color: orange;
+                    text-align: center;
+                    margin-top: 1rem;
+                }
+                h4 {
+                    margin-bottom: .8rem;
+                }
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

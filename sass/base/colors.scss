@@ -1,0 +1,18 @@
+:root {
+  --color-primary: #BE431B;
+  --color-secondary: #F5F4E2;
+  --color-tertiary: #BDD6C7;
+  --color-dark-grey: #2f2f2f;
+  --shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  --main-space: 5rem;
+  --border-radius: 2.5rem;
+
+  //--rails: 1px solid black;
+
+}
+
+$bp-medium:56.25em; //900/16
+
+.text-accent {
+  color: var(--color-primary);
+}

@@ -1,0 +1,54 @@
+.testimonial {
+	padding: 8rem 2rem;
+	margin-top: var(--main-space);
+	background-color: var(--color-tertiary);
+	border-radius: var(--border-radius);
+	h5, h3 {
+		@media only screen and (max-width:$bp-medium) {
+			text-align: center;
+		}
+	}
+	&__grid {
+		margin-top: 2rem;
+		display: flex;
+		gap: 2rem;
+		@media only screen and (max-width:$bp-medium) {
+			flex-direction: column;
+		}
+		&__item {
+			border-radius: var(--border-radius);
+			background-color: white;
+			padding: 2rem;
+			display: flex;
+			flex: 1;
+			flex-direction: column;
+			justify-content: space-between;
+			.description {
+				text-align: center;
+			}
+			.details {
+				//background-color: orangered;
+				text-align: center;
+				.name {
+					margin-top: .8rem;
+					margin-bottom: .7rem;
+					font-size: 1.2rem;
+				}
+				.portrait {
+					width: 5rem;
+					height: 5rem;
+				}
+				.company {
+					height: 2rem;
+				}
+				.role {
+					display: block;
+					margin-bottom: 1rem;
+					font-style: italic;
+					color: var(--color-darkest-grey);
+					font-size: 1.1rem;
+				}
+			}
+		}
+	}
+}

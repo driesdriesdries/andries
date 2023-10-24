@@ -138,16 +138,32 @@ add_action( 'widgets_init', 'andries_widgets_init' );
  * Enqueue scripts and styles.
  */
 function andries_scripts() {
-	wp_enqueue_style( 'andries-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'andries-style', 'rtl', 'replace' );
+    wp_enqueue_style( 'andries-style', get_stylesheet_uri(), array(), _S_VERSION );
+    wp_style_add_data( 'andries-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'andries-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+    // Enqueue navigation.js
+    wp_enqueue_script( 'andries-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+    // Enqueue animation.js
+    wp_enqueue_script( 'andries-animation', get_template_directory_uri() . '/js/animation.js', array(), _S_VERSION, true );
+
+    // Enqueue modal.js
+    wp_enqueue_script( 'andries-modal', get_template_directory_uri() . '/js/modal.js', array(), _S_VERSION, true );
+
+    if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+        wp_enqueue_script( 'comment-reply' );
+    }
 }
+
 add_action( 'wp_enqueue_scripts', 'andries_scripts' );
+
+function mytheme_add_favicon() {
+	// Favicon for older browsers.
+	echo '<link rel="shortcut icon" href="' . get_template_directory_uri() . '/favicon.ico" >';
+
+ }
+ add_action('wp_head', 'mytheme_add_favicon');
+ 
 
 /**
  * Implement the Custom Header feature.

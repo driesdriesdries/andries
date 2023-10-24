@@ -1,0 +1,19 @@
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    border: var(--rails);
+    margin: auto;
+    > div {
+        border-bottom: var(--rails);
+    }
+    .main-content {
+        background-color: white;
+        padding-bottom: 100rem;
+        padding: var(--main-space);
+        @media only screen and (max-width:$bp-medium) {
+            padding: 0;
+        }
+    }
+}

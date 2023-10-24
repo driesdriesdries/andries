@@ -1,0 +1,56 @@
+.logo-container {
+	background-color: var(--color-secondary);
+	display: flex;
+	justify-content: center;
+	height: 10rem;
+	align-items: center;
+	@media only screen and (max-width:$bp-medium) {
+		height: 7rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+	&__logo {
+		background-color: red;
+		align-content: center;
+		margin-right: 8rem;
+		mix-blend-mode: multiply;
+		justify-content: center;
+		border: var(--rails);
+		&:last-child {
+			margin-right: 0;
+			margin-left: -1.4rem;
+		}
+		&--1 {
+			background: url('images/logo-2chefs.png') no-repeat center center / contain;
+			height: 5rem;
+			width: 11rem;
+			@media only screen and (max-width:$bp-medium) {
+				height: 3.5rem;
+			}
+		}
+		&--2 {
+			background: url('images/logo-getsmarter.png') no-repeat center center / contain;
+			height: 5rem;
+			width: 8.9rem;
+			@media only screen and (max-width:$bp-medium) {
+				height: 3.5rem;
+			}
+		}
+		&--3 {
+			background: url('images/logo-2u.png') no-repeat center center / contain;
+			height: 5rem;
+			width: 3.9rem;
+			@media only screen and (max-width:$bp-medium) {
+				height: 3.5rem;
+			}
+		}
+		&--4 {
+			background: url('images/logo-edx.png') no-repeat center center / contain;
+			height: 4rem;
+			width: 7.7rem;
+			@media only screen and (max-width:$bp-medium) {
+				height: 3.5rem;
+			}
+		}
+	}
+}
