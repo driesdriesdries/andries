@@ -1,3 +1,6 @@
+.modal-window {
+    display: none;
+}
 .modal-window.active {
 	background-color: var(--color-secondary);
 	position: fixed;
