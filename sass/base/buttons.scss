@@ -1,10 +1,29 @@
-.primary-button {
-  background-color: var(--color-primary);
+/* Base button class */
+.base-button {
+  border: 2px solid var(--color-primary);
   padding: 2rem 2rem;
-  color: white;
   display: inline-block;
   border-radius: 5rem;
   font-size: 2.4rem;
   font-weight: bold;
   text-decoration: none;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Primary button - extends base button */
+.primary-button {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Secondary button - extends base button */
+.secondary-button {
+  color: var(--color-primary);
+}
+
+/* Generic hover state for both primary and secondary buttons */
+.primary-button:hover, .secondary-button:hover {
+  /* Define the hover styles here */
+  background-color: var(--hover-background-color); /* Example hover background color */
+  color: var(--hover-text-color); /* Example hover text color */
 }
