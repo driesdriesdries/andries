@@ -27,3 +27,9 @@
   background-color: var(--hover-background-color); /* Example hover background color */
   color: var(--hover-text-color); /* Example hover text color */
 }
+
+.button-group {
+  .secondary-button {
+    margin-left: 2rem;
+  }
+}

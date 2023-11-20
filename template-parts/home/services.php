@@ -14,7 +14,7 @@
             </div>
             <div class="services__right--service--right">
                 <h4>A Thinking Partner</h4>
-                <p>I'm passionate about the Web, with a focus on Human-Computer Interaction and Bitcoin's value digitization. These advancements are not only changing how we design digital products, making them more intuitive and secure, but also paving the way for innovative business models.</p>
+                <p>My professional interests revolve around three dynamic areas: the intricacies of Digital Product encompassing strategy, design, and development; the transformative power and potential of Bitcoin in the financial landscape; and the cutting-edge field of AI and human-computer interaction, exploring how these technologies redefine our digital experience.</p>
             </div>
         </div>
         <div class="services__right--service">
@@ -23,7 +23,7 @@
             </div>
             <div class="services__right--service--right">
                 <h4>Passion for Product Development</h4>
-                <p>My interest in digital product technology dates back to high school when I started toying with front-end technologies and custom WordPress theme development. I also wrote, designed and built this web page :)</p>
+                <p>Since high school, my fascination with digital product technology has been a driving force in my career. It began with experimenting in front-end technologies and crafting custom WordPress themes. This passion not only deepened my technical skills but also led me to design and build this very web page you're viewing — a testament to my journey and expertise in digital product development.</p>
             </div>
         </div>
         <div class="services__right--service">
@@ -32,7 +32,7 @@
             </div>
             <div class="services__right--service--right">
                 <h4>Growth & Experimentation</h4>
-                <p>Having planned and executed various conversion optimisation strategies I’ve learned a thing or two about monetisation strategy, lead generation and product marketing tactics.</p>
+                <p>In my exploration of growth and experimentation, I have honed my skills through planning and executing various conversion optimization strategies, including A/B testing. This hands-on experience has provided me with a deep understanding of monetization strategies, lead generation, and product marketing tactics, essential tools in my arsenal for digital product development.</p>
             </div>
         </div>
     </div>
