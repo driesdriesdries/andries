@@ -1,5 +1,5 @@
 
-  <div class="timeline">
+  <div class="timeline fade-in">
     <ul>
       <li>
         <div class="content">
