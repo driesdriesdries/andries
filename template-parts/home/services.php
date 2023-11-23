@@ -14,7 +14,7 @@
             </div>
             <div class="services__right--service--right">
                 <h4>A Thinking Partner</h4>
-                <p>My professional interests revolve around three dynamic areas: the intricacies of Digital Product encompassing strategy, design, and development; the transformative power and potential of Bitcoin in the financial landscape; and the cutting-edge field of AI and human-computer interaction, exploring how these technologies redefine our digital experience.</p>
+                <p>I'm keen to connect with individuals or groups about most topics in the Product space.</p>
             </div>
         </div>
         <div class="services__right--service">
@@ -22,8 +22,8 @@
                 <img src="<?php echo get_theme_file_uri('images/services-product-development.png'); ?>" alt="Profile Picture">
             </div>
             <div class="services__right--service--right">
-                <h4>Passion for Product Development</h4>
-                <p>Since high school, my fascination with digital product technology has been a driving force in my career. It began with experimenting in front-end technologies and crafting custom WordPress themes. This passion not only deepened my technical skills but also led me to design and build this very web page you're viewing — a testament to my journey and expertise in digital product development.</p>
+                <h4>A Product Builder</h4>
+                <p>I've been building websites since 2007. I enjoy practicing the entire software development lifecycle from Design to Deployment.</p>
             </div>
         </div>
         <div class="services__right--service">
@@ -31,8 +31,8 @@
                 <img src="<?php echo get_theme_file_uri('images/services-experimentation.png'); ?>" alt="Profile Picture">
             </div>
             <div class="services__right--service--right">
-                <h4>Growth & Experimentation</h4>
-                <p>In my exploration of growth and experimentation, I have honed my skills through planning and executing various conversion optimization strategies, including A/B testing. This hands-on experience has provided me with a deep understanding of monetization strategies, lead generation, and product marketing tactics, essential tools in my arsenal for digital product development.</p>
+                <h4>Growth Strategist</h4>
+                <p>I've done a lot of web experimentation and AB testing with large volumes of traffic. It has taught me the impact of designing and executing against a test roadmap.</p>
             </div>
         </div>
     </div>

@@ -3,8 +3,8 @@
     <ul>
       <li>
         <div class="content">
-          <h4>Front End Developer</h4>
-          <p>Collaborated closely with the SEO and Product Design teams to engineer custom microsites. These were optimized for organic traffic and deployed on partner-owned web domains. My work focused on developing lead capture pages tailored for prestigious universities such as Harvard, Cambridge, and the LSE.</p>
+          <h4>Web Developer</h4>
+          <p>Collaborated closely with the SEO and Product Design teams to engineer custom, conversion optimized microsites. Pages were tailored to adhere to prestigious university brand guidelines such as Harvard, Cambridge, and the LSE.</p>
         </div>
         <div class="time">
           <h4>2016/2017</h4>
@@ -14,7 +14,7 @@
       <li>
         <div class="content">
           <h4>Organic Development</h4>
-          <p>Led an agile product development team to produce the GetSmarter blog, achieving a milestone of roughtly two million yearly sessions. My role encompassed directing the UX/UI design, content architecture, and the development of a modern front end able to generate flexible content as well as house custom built campaign pages.</p>
+          <p>Led an agile product development team to produce the new GetSmarter blog, achieving a milestone of roughtly two million yearly sessions. My role encompassed directing the UX/UI design, content architecture and loading, and the engineering of a modern CMS, able to generate flexible content as well as house custom built campaign landing pages.</p>
         </div>
         <div class="time">
           <h4>2017/2018</h4>

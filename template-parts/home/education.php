@@ -5,7 +5,7 @@
             <h3>Academic Degree and </br><span class="text-accent">Professional Certifications</span></h3>
         </div>
         <div class="education__primary__right">
-            <p>Working in Ed-Tech, I embraced the chance for self-study, earning certifications from top universities through various online courses. This journey has not only enriched my professional skill set but also fostered significant personal growth, shaping my approach in the dynamic world of Product.</p>
+            <p>Working in Ed-Tech, I embraced the chance for self-study, earning certifications from top universities through various online courses. This journey has not only enriched my professional skill set but also fostered significant personal growth, shaping my approach to working with others.</p>
         </div>
     </div>
     <div class="education__logos">
