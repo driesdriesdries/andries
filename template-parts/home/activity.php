@@ -14,7 +14,7 @@
       <li>
         <div class="content">
           <h4>Organic Development</h4>
-          <p>Led an agile product development team to produce the new GetSmarter blog, achieving a milestone of roughtly two million yearly sessions. My role encompassed directing the UX/UI design, content architecture and loading, and the engineering of a modern CMS, able to generate flexible content as well as house custom built campaign landing pages.</p>
+          <p>Led an agile product development team to produce the new GetSmarter blog, achieving a milestone of two million yearly sessions. My role encompassed directing the UX/UI design, content architecture and loading, and the engineering of a modern CMS, able to generate flexible content as well as house custom built campaign landing pages.</p>
         </div>
         <div class="time">
           <h4>2017/2018</h4>
