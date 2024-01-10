@@ -11,6 +11,7 @@
 			<?php get_template_part( 'template-parts/home/services' ); ?>
 			<?php get_template_part( 'template-parts/home/education' ); ?>
 			<?php get_template_part( 'template-parts/home/activity' ); ?>
+			<?php get_template_part( 'template-parts/home/blog' ); ?>
 			<?php get_template_part( 'template-parts/home/testimonial' ); ?>
 			<?php get_template_part( 'template-parts/home/callout' ); ?>
 			<?php get_template_part( 'template-parts/home/contact-modal' ); ?>
