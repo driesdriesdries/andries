@@ -8,33 +8,46 @@
  */
 
 get_header();
+
+// Get the current post ID and the URL of the featured image
+$post_id = get_the_ID(); 
+$featured_img_url = get_the_post_thumbnail_url($post_id, 'full');
+
+// Get the first category of the post
+$categories = get_the_category();
+$category_name = (!empty($categories)) ? $categories[0]->name : 'Uncategorized';
+
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
+    <div class="wrapper single-post">
+        <div class="back-home">
+            <a href="<?php echo site_url(); ?>">Go back</a>
+        </div>
+        <div class="social-icons">
+            <div class="icon"><span class="item"><a href="#">Insta</a></span></div>
+            <div class="icon"><span class="item"><a href="#">Insta</a></span></div>
+        </div>
+        <div class="featured-image">
+		<div class="left" style="background-image: url('<?php echo esc_url($featured_img_url); ?>'); background-size: cover; background-position: center; background-repeat: no-repeat;">Image</div>
+            <div class="right">
+                <div class="content-box">
+                    <p class="post-meta"><?php echo esc_html($category_name); ?> | 4 MINUTE READ</p>
+                    <h3 class="post-title"><?php echo get_the_title(); ?></h3>
+                    <p class="date"><?php echo get_the_date(); ?></p>
+                </div>
+            </div>
+        </div>
+        <div class="post-body">
+			<div class="slim">
+				<?php the_content(); ?>
+			</div>
+		</div>
+    </div>  
 
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'andries' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'andries' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
+</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
+?>
