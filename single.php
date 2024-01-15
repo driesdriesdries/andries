@@ -19,18 +19,14 @@ $category_name = (!empty($categories)) ? $categories[0]->name : 'Uncategorized';
 
 ?>
 
-<main id="primary" class="site-main">
+<main id="primary" class="site-main fade-in">
 
     <div class="wrapper single-post">
         <div class="back-home">
-            <a href="<?php echo site_url(); ?>">Go back</a>
-        </div>
-        <div class="social-icons">
-            <div class="icon"><span class="item"><a href="#">Insta</a></span></div>
-            <div class="icon"><span class="item"><a href="#">Insta</a></span></div>
+			<div class="icon"><span class="item"><a href="<?php echo site_url(); ?>"><img src="<?php echo get_theme_file_uri('images/back.png'); ?>" alt="icon for linkedin sharing "></a></span></div>
         </div>
         <div class="featured-image">
-		<div class="left" style="background-image: url('<?php echo esc_url($featured_img_url); ?>'); background-size: cover; background-position: center; background-repeat: no-repeat;">Image</div>
+		<div class="left" style="background-image: url('<?php echo esc_url($featured_img_url); ?>'); background-size: cover; background-position: center; background-repeat: no-repeat;"></div>
             <div class="right">
                 <div class="content-box">
                     <p class="post-meta"><?php echo esc_html($category_name); ?> | 4 MINUTE READ</p>
