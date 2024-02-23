@@ -23,53 +23,56 @@ get_header(); ?>
         <div class="details">
             <div class="left">
                 <h4>Bill To:</h4>
-                <p>SANTS</p>
+                <?php 
+                $associated_clients = get_field('associated_client');
+                if ($associated_clients):
+                    $client_post = $associated_clients[0];
+                    if ($client_post): ?>
+                        <p><?php echo esc_html($client_post->post_title); ?></p>
+                    <?php endif;
+                endif; ?>
             </div>
             <div class="right">
-                <h4>Invoice Number: 2</h4>
-                <p>Invoice Date: February 19, 2024</p>
-                <p>Payment Due: March 14, 2024</p>
-                <p>Amount Due: R10 000</p>
+                <h4>Invoice Number: <?php the_field('invoice_number'); ?></h4>
+                <p>Invoice Date: <?php the_field('invoice_date'); ?></p>
+                <p>Payment Due: <?php the_field('due_date'); ?></p>
             </div>
         </div>
         <div class="table">
             <table>
                 <thead>
                     <tr>
-                    <th>Items</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                    <th>Amount</th>
+                        <th>Items</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Amount</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <?php 
+                    $total_amount_due = 0;
+                    if (have_rows('services_provided')): 
+                        while (have_rows('services_provided')): the_row(); 
+                            $item = get_sub_field('item');
+                            $quantity = get_sub_field('quantity');
+                            $price = get_sub_field('price');
+                            $amount = $price * $quantity;
+                            $total_amount_due += $amount; // Add each amount to the total
+                    ?>
                     <tr>
-                    <td>Sants Retainer</td>
-                    <td>20</td>
-                    <td>R500</td>
-                    <td>R10,000</td>
+                        <td><?php echo esc_html($item); ?></td>
+                        <td><?php echo esc_html($quantity); ?></td>
+                        <td>R<?php echo number_format($price, 2, '.', ','); ?></td>
+                        <td>R<?php echo number_format($amount, 2, '.', ','); ?></td>
                     </tr>
-                    <!-- Additional rows can be added here -->
-                    <tr>
-                    <td>Sants Retainer</td>
-                    <td>20</td>
-                    <td>R500</td>
-                    <td>R10,000</td>
-                    </tr>
-
-                    <tr>
-                    <td>Sants Retainer</td>
-                    <td>20</td>
-                    <td>R500</td>
-                    <td>R10,000</td>
-                    </tr>
+                    <?php endwhile; endif; ?>
                 </tbody>
             </table>
         </div>
+        
         <div class="total-container">
-            <span class="label">Total:</span><span class="amount">R10,000</span>
-            <br>
-            <span class="label">Amount Due:</span><span class="amount">R10,000</span>
+            <span class="label">Total Amount Due:</span>
+            <span class="amount">R<?php echo number_format($total_amount_due, 2, '.', ','); ?></span>
         </div>
         <div class="footer">
             <h4>Notes</h4>
@@ -80,44 +83,5 @@ get_header(); ?>
         </div>
     </div>
 </div>
-
-<h1>Invoice Details</h1>
-
-<?php while ( have_posts() ) : the_post(); ?>
-
-    <p>Invoice Number: <?php the_field('invoice_number'); ?></p>
-    <p>Invoice Date: <?php the_field('invoice_date'); ?></p>
-    <p>Due Date: <?php the_field('due_date'); ?></p>
-    <p>Invoice Total: <?php the_field('invoice_total'); ?></p>
-
-    <?php 
-    $associated_clients = get_field('associated_client');
-    if( $associated_clients ):
-        // Assuming there's only one client associated
-        $client_post = $associated_clients[0];
-        if( $client_post ): ?>
-
-            <p>Client Name: <?php echo esc_html( $client_post->post_title ); ?></p>
-            <p>Client Email: <?php echo esc_html( get_field('email_address', $client_post->ID) ); ?></p>
-            <p>Client Phone: <?php echo esc_html( get_field('phone_number', $client_post->ID) ); ?></p>
-            <p>Client Address: <?php echo esc_html( get_field('address', $client_post->ID) ); ?></p>
-            
-        <?php endif;
-    endif; ?>
-
-    <?php // Handle the services_provided repeater field
-    if ( have_rows('services_provided') ): ?>
-        <ul>
-            <?php while ( have_rows('services_provided') ): the_row(); ?>
-                <li>
-                    <strong>Service:</strong> <?php the_sub_field('service'); ?><br>
-                    <strong>Description:</strong> <?php the_sub_field('description'); ?><br>
-                    <strong>Cost:</strong> <?php the_sub_field('cost'); ?>
-                </li>
-            <?php endwhile; ?>
-        </ul>
-    <?php endif; ?>
-
-<?php endwhile; ?>
 
 <?php get_footer(); ?>
