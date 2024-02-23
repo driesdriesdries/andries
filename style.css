@@ -192,6 +192,89 @@ h6 {
       border-top: 1px solid #2f2f2f;
       padding-top: 4rem; }
 
+.invoice-container {
+  background-color: white;
+  display: flex;
+  justify-content: center; }
+  .invoice-container .invoice {
+    width: 1140px; }
+    .invoice-container .invoice .header {
+      background-color: tomato;
+      text-align: right;
+      border-bottom: 2px solid #2f2f2f; }
+      .invoice-container .invoice .header p {
+        margin-bottom: .5rem; }
+    .invoice-container .invoice .details {
+      background-color: violet;
+      display: flex;
+      justify-content: space-between; }
+      .invoice-container .invoice .details .left, .invoice-container .invoice .details .right {
+        width: 50%; }
+      .invoice-container .invoice .details .left {
+        background-color: yellow; }
+      .invoice-container .invoice .details .right {
+        background-color: crimson; }
+    .invoice-container .invoice .table table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 2rem; }
+      .invoice-container .invoice .table table th, .invoice-container .invoice .table table td {
+        text-align: left;
+        padding: 8px;
+        border: 1px solid #ddd; }
+      .invoice-container .invoice .table table th {
+        background-color: #f2f2f2; }
+    @media screen and (max-width: 600px) {
+      .invoice-container .invoice .table table, .invoice-container .invoice .table thead, .invoice-container .invoice .table tbody, .invoice-container .invoice .table th, .invoice-container .invoice .table td, .invoice-container .invoice .table tr {
+        display: block; }
+      .invoice-container .invoice .table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px; }
+      .invoice-container .invoice .table tr {
+        border: 1px solid #ccc; }
+      .invoice-container .invoice .table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right; }
+        .invoice-container .invoice .table td:before {
+          position: absolute;
+          top: 6px;
+          left: 6px;
+          width: 45%;
+          padding-right: 10px;
+          white-space: nowrap;
+          text-align: left;
+          font-weight: bold; }
+      .invoice-container .invoice .table td:nth-of-type(1):before {
+        content: "Items"; }
+      .invoice-container .invoice .table td:nth-of-type(2):before {
+        content: "Quantity"; }
+      .invoice-container .invoice .table td:nth-of-type(3):before {
+        content: "Price"; }
+      .invoice-container .invoice .table td:nth-of-type(4):before {
+        content: "Amount"; } }
+    .invoice-container .invoice .total-container {
+      background-color: peachpuff;
+      text-align: right; }
+      .invoice-container .invoice .total-container span {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        padding-top: 2rem;
+        display: inline-block; }
+      .invoice-container .invoice .total-container .label {
+        font-weight: bold;
+        padding-right: 4rem; }
+      .invoice-container .invoice .total-container .amount {
+        background-color: red;
+        padding-right: 4rem; }
+    .invoice-container .invoice .footer {
+      background-color: orange; }
+      .invoice-container .invoice .footer p {
+        margin-bottom: .5rem; }
+
 .hero {
   padding: 12rem 0 15rem;
   display: flex;
