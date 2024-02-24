@@ -78,7 +78,7 @@ get_header(); ?>
             <h4>Notes</h4>
             <p>Account Holder: AG Bester</p>
             <p>Bank: FNB</p>
-            <p>Account Number: 912309210930</p>
+            <p>Account Number: 62597120098</p>
             <p>Branch Code: 250665</p>
         </div>
     </div>

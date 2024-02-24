@@ -201,10 +201,12 @@ h6 {
     .invoice-container .invoice .header {
       background-color: tomato;
       text-align: right;
-      border-bottom: 2px solid #2f2f2f; }
+      border-bottom: 2px solid #2f2f2f;
+      padding: 2rem; }
       .invoice-container .invoice .header p {
         margin-bottom: .5rem; }
     .invoice-container .invoice .details {
+      padding: 2rem;
       background-color: violet;
       display: flex;
       justify-content: space-between; }
@@ -220,7 +222,7 @@ h6 {
       font-size: 2rem; }
       .invoice-container .invoice .table table th, .invoice-container .invoice .table table td {
         text-align: left;
-        padding: 8px;
+        padding: 2rem;
         border: 1px solid #ddd; }
       .invoice-container .invoice .table table th {
         background-color: #f2f2f2; }
@@ -271,7 +273,8 @@ h6 {
         background-color: red;
         padding-right: 4rem; }
     .invoice-container .invoice .footer {
-      background-color: orange; }
+      background-color: orange;
+      padding: 2rem; }
       .invoice-container .invoice .footer p {
         margin-bottom: .5rem; }
 

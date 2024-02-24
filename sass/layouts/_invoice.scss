@@ -1,3 +1,5 @@
+$padding: 2rem;
+
 .invoice-container {
     background-color: white;
     display: flex;
@@ -9,11 +11,13 @@
             background-color: tomato;
             text-align: right;
             border-bottom: 2px solid #2f2f2f;
+            padding: $padding;
             p {
                 margin-bottom: .5rem;
             }
         }
         .details {
+            padding: $padding;
             .left, .right {
                 width: 50%;
             }
@@ -33,6 +37,7 @@
             $table-border-color: #ddd;
             $thead-background-color: #f2f2f2;
             $mobile-breakpoint: 600px;
+            
             table {
             width: 100%;
             border-collapse: collapse;
@@ -40,7 +45,7 @@
 
             th, td {
                 text-align: left;
-                padding: 8px;
+                padding: $padding;
                 border: 1px solid $table-border-color;
             }
 
@@ -111,6 +116,7 @@
         }
         .footer {
             background-color: orange;
+            padding: $padding;
             p {
                 margin-bottom: .5rem;
             }
