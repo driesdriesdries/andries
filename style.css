@@ -198,7 +198,10 @@ h6 {
   justify-content: center; }
   .invoice-container .invoice {
     width: 80rem;
-    max-width: 1140px; }
+    max-width: 1140px;
+    border: 1px solid #2f2f2f;
+    padding: 2rem;
+    margin-top: 1rem; }
     .invoice-container .invoice .header {
       text-align: right;
       border-bottom: 2px solid #2f2f2f;

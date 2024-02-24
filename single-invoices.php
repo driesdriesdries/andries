@@ -26,17 +26,30 @@ get_header(); ?>
                 <?php 
                 $associated_clients = get_field('associated_client');
                 if ($associated_clients):
+                    // We'll only link the first associated client for simplicity.
                     $client_post = $associated_clients[0];
-                    if ($client_post): ?>
-                        <p><?php echo esc_html($client_post->post_title); ?></p>
-                    <?php endif;
-                endif; ?>
+                    if ($client_post): 
+                        // Get the permalink for the client post.
+                        $client_link = get_permalink($client_post->ID);
+                ?>
+                        <!-- Output the client's name as a hyperlink -->
+                        <p><a href="<?php echo esc_url($client_link); ?>"><?php echo esc_html($client_post->post_title); ?></a></p>
+                <?php 
+                    endif;
+                endif; 
+                ?>
             </div>
             <div class="right">
                 <h4>Invoice Number: <?php the_field('invoice_number'); ?></h4>
                 <p>Invoice Date: <?php the_field('invoice_date'); ?></p>
                 <p>Payment Due: <?php the_field('due_date'); ?></p>
+                <?php 
+                // Fetch the status here before you try to echo it out.
+                $invoice_status = get_field('invoice_status'); 
+                ?>
+                <p>Status: <span><?php echo esc_html($invoice_status); ?></span></p>
             </div>
+
         </div>
         <div class="table">
             <table>
