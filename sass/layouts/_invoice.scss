@@ -6,29 +6,40 @@ $padding: 2rem;
     justify-content: center;
     .invoice {
         //background-color: green;
-        width: 1140px;
+        width: 80rem;
+        max-width: 1140px;
         .header {
-            background-color: tomato;
+            //background-color: tomato;
             text-align: right;
             border-bottom: 2px solid #2f2f2f;
-            padding: $padding;
+            padding-top: $padding;
+            padding-bottom: $padding;
             p {
                 margin-bottom: .5rem;
             }
         }
         .details {
-            padding: $padding;
             .left, .right {
                 width: 50%;
+                h4 {
+                    //background-color: yellow;
+                    margin-bottom: 1rem;
+                }
             }
-            background-color: violet;
+            padding-top: $padding;
+            padding-bottom: $padding;
+            // background-color: #fbfbfb;
             display: flex;
             justify-content: space-between;
             .left {
-                background-color: yellow;
+                //background-color: yellow;
             }
             .right {
-                background-color: crimson;
+                //background-color: crimson;
+                text-align: right;
+                p {
+                    margin-bottom: .5rem;
+                }
             }
         }
         .table {
@@ -37,7 +48,8 @@ $padding: 2rem;
             $table-border-color: #ddd;
             $thead-background-color: #f2f2f2;
             $mobile-breakpoint: 600px;
-            
+            padding-top: $padding;
+            padding-bottom: $padding;
             table {
             width: 100%;
             border-collapse: collapse;
@@ -97,7 +109,7 @@ $padding: 2rem;
 
         }
         .total-container {
-            background-color: peachpuff;
+            //background-color: peachpuff;
             text-align: right;
             span {
                 font-size: 2rem;
@@ -110,12 +122,12 @@ $padding: 2rem;
                 padding-right: 4rem;
             }
             .amount {
-                background-color: red;
+                //background-color: red;
                 padding-right: 4rem;
             }
         }
         .footer {
-            background-color: orange;
+            //background-color: orange;
             padding: $padding;
             p {
                 margin-bottom: .5rem;
