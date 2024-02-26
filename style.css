@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
 Theme Name: Andries
 Theme URI: http://andries.io/
@@ -194,7 +193,6 @@ h6 {
       padding-top: 4rem; }
 
 .client-container {
-  background-color: pink;
   display: flex;
   justify-content: center; }
   .client-container p {
@@ -207,13 +205,8 @@ h6 {
     margin-top: 1rem;
     display: flex;
     flex-direction: column; }
-    .client-container .client .logo {
-      width: 20rem;
-      height: 20rem;
-      background-color: teal;
-      background: url("http://localhost:8888/andries/wp-content/uploads/2024/01/DALL·E-2024-01-11-06.47.22-An-image-that-encapsulates-the-essence-of-visual-pleasure.-Imagine-a-serene-landscape-with-a-vibrant-sunset-sky-casting-a-warm-golden-light-over-a-tr.png");
-      background-size: cover;
-      background-position: center; }
+    .client-container .client .logo img {
+      height: 8rem; }
     .client-container .client .details {
       background-color: tomato;
       margin-top: 1rem;
@@ -232,11 +225,28 @@ h6 {
           background-color: honeydew;
           display: flex;
           justify-content: space-between;
-          margin-top: 1rem; }
+          margin-top: 1rem;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          border: 4px solid #efefef;
+          border-radius: 5px;
+          margin-bottom: 1rem; }
           .client-container .client .invoices-group .invoice-list .item .left {
-            background-color: rosybrown; }
+            background-color: rosybrown;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 2rem; }
+            .client-container .client .invoices-group .invoice-list .item .left p {
+              margin-bottom: 0px; }
           .client-container .client .invoices-group .invoice-list .item .right {
-            background-color: yellow; }
+            background-color: yellow;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-right: 2rem; }
+            .client-container .client .invoices-group .invoice-list .item .right p {
+              margin-bottom: 0px; }
 
 .invoice-container {
   background-color: white;

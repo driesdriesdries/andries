@@ -1,6 +1,6 @@
 $padding: 2rem;
 .client-container {
-    background-color: pink;
+    // background-color: pink;
     display: flex;
     justify-content: center;
     p {
@@ -15,12 +15,9 @@ $padding: 2rem;
         display: flex;
         flex-direction: column;
         .logo {
-            width: 20rem;
-            height: 20rem;
-            background-color: teal;
-            background: url('http://localhost:8888/andries/wp-content/uploads/2024/01/DALL·E-2024-01-11-06.47.22-An-image-that-encapsulates-the-essence-of-visual-pleasure.-Imagine-a-serene-landscape-with-a-vibrant-sunset-sky-casting-a-warm-golden-light-over-a-tr.png');
-            background-size: cover;
-            background-position: center;
+            img {
+                height: 8rem;
+            }
         }
         .details {
             background-color: tomato;
@@ -44,11 +41,30 @@ $padding: 2rem;
                     display: flex;
                     justify-content: space-between;
                     margin-top: 1rem;
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                    border: 4px solid #efefef;
+                    border-radius: 5px;
+                    margin-bottom: 1rem;
                     .left {
                         background-color: rosybrown;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding-left: 2rem;
+                        p {
+                            margin-bottom: 0px;
+                        }
                     }
                     .right {
                         background-color: yellow;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding-right: 2rem;
+                        p {
+                            margin-bottom: 0px;
+                        }
                     }
                 }
             }

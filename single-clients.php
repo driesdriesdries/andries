@@ -9,102 +9,21 @@
 
 global $wpdb;
 
-get_header(); ?>
+get_header();
 
-<div class="client-container">
-    <div class="client">
-        <div class="logo"></div>
-        <div class="details">
-            <p>Name: <span>SANTS</span></p>
-            <p>Email: <span>Kobie@sants.co.za</span></p>
-            <p>Address: <span>3rd Floor, Landmark Building, 13 Umgazi Rd, Menlo Park, Pretoria, 0081</span></p>
-            <p>Client Since: <span>12/01/2024</span></p>
-        </div>
-        <div class="invoices-group">
-            <div class="status"><h3>Status: <span>Outstanding</span></h3></div>
-            <div class="invoice-list">
-                <div class="item">
-                    <div class="left">
-                        <p><a href="#">SANTS - FEB - 2024</a></p>
-                    </div>
-                    <div class="right">
-                        <p>Due Date: 22 March 2024</p>
-                        <p>Amount Due: R500</p>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="left">
-                        <p><a href="#">SANTS - FEB - 2024</a></p>
-                    </div>
-                    <div class="right">
-                        <p>Due Date: 22 March 2024</p>
-                        <p>Amount Due: R500</p>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="left">
-                        <p><a href="#">SANTS - FEB - 2024</a></p>
-                    </div>
-                    <div class="right">
-                        <p>Due Date: 22 March 2024</p>
-                        <p>Amount Due: R500</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="status"><h3>Status: <span>Completed</span></h3></div>
-            <div class="invoice-list">
-                <div class="item">
-                    <div class="left">
-                        <p><a href="#">SANTS - FEB - 2024</a></p>
-                    </div>
-                    <div class="right">
-                        <p>Due Date: 22 March 2024</p>
-                        <p>Amount Due: R500</p>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="left">
-                        <p><a href="#">SANTS - FEB - 2024</a></p>
-                    </div>
-                    <div class="right">
-                        <p>Due Date: 22 March 2024</p>
-                        <p>Amount Due: R500</p>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="left">
-                        <p><a href="#">SANTS - FEB - 2024</a></p>
-                    </div>
-                    <div class="right">
-                        <p>Due Date: 22 March 2024</p>
-                        <p>Amount Due: R500</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<?php while ( have_posts() ) : the_post();
+while ( have_posts() ) : the_post();
 
     $current_client_id = get_the_ID();
-?>
+    $client_logo = get_field('client_logo');
+    $client_name = get_field('client_name') ?: get_the_title(); // Fallback to post title if no client name set
+    $email_address = get_field('email_address');
+    $phone_number = get_field('phone_number');
+    $address = get_field('address');
+    $client_since = get_field('client_since');
+    $client_since_formatted = $client_since ? date("d/m/Y", strtotime($client_since)) : '';
+    $logo_url = $client_logo['url'] ?? ''; // Default to empty string if no logo
 
-    <h1>Client Details</h1>
-    <h2><?php the_title(); ?></h2>
-    <p>Email Address: <?php the_field('email_address'); ?></p>
-    <p>Phone Number: <?php the_field('phone_number'); ?></p>
-    <p>Address: <?php the_field('address'); ?></p>
-    <p>Client Since: <?php the_field('client_since'); ?></p>
-
-    <h2>Invoices for <?php the_title(); ?></h2>
-
-    <?php 
+    // Query invoices related to this client
     $invoice_ids = $wpdb->get_col($wpdb->prepare("
         SELECT post_id
         FROM $wpdb->postmeta
@@ -112,40 +31,77 @@ get_header(); ?>
         AND meta_value LIKE %s
     ", '%' . $wpdb->esc_like(':"' . $current_client_id . '";') . '%'));
 
+    // Organize invoices by status
     $invoices_by_status = [];
 
     if (!empty($invoice_ids)) {
         foreach ($invoice_ids as $invoice_id) {
             $status = get_post_meta($invoice_id, 'invoice_status', true);
-            // Organize invoices by status
-            $invoices_by_status[$status][] = $invoice_id;
+            $invoices_by_status[$status][] = [
+                'ID' => $invoice_id,
+                'title' => get_the_title($invoice_id),
+                'permalink' => get_permalink($invoice_id),
+                'due_date' => get_post_meta($invoice_id, 'due_date', true),
+                'amount_due' => get_post_meta($invoice_id, 'amount_due', true) // Assuming 'amount_due' is a custom field
+            ];
         }
-
-        // Define colors for each status
-        $status_colors = [
-            'Draft' => '#808080', // Grey
-            'Sent' => '#0000FF', // Blue
-            'Viewed' => '#FFD700', // Gold
-            'Paid' => '#008000', // Green
-            'Overdue' => '#FF4500', // OrangeRed
-            'Cancelled' => '#FF0000', // Red
-        ];
-
-        // Now display the invoices grouped by status
-        foreach ($invoices_by_status as $status => $ids) {
-            $status_color = $status_colors[$status] ?? '#000000'; // Default to black if not set
-            echo '<h3 style="color: ' . esc_attr($status_color) . ';">' . esc_html($status) . '</h3><ul>';
-            foreach ($ids as $id) {
-                echo '<li><a href="' . get_permalink($id) . '">' . get_the_title($id) . '</a> - <span style="background-color:' . esc_attr($status_color) . '; color: #ffffff;">' . esc_html($status) . '</span></li>';
-            }
-            echo '</ul>';
-        }
-    } else {
-        echo '<p>No invoices found for this client.</p>';
     }
+
+    // Status colors
+    $status_colors = [
+        'Draft' => '#808080',
+        'Sent' => '#0000FF',
+        'Viewed' => '#FFD700',
+        'Paid' => '#008000',
+        'Overdue' => '#FF4500',
+        'Cancelled' => '#FF0000',
+    ];
 ?>
 
-<?php endwhile;
+<div class="client-container">
+    <div class="client">
+        <div class="logo"><img src="<?php echo esc_url($logo_url); ?>" alt=""></div>
+        <div class="details">
+            <p>Name: <span><?php echo esc_html($client_name); ?></span></p>
+            <p>Email: <span><?php echo esc_html($email_address); ?></span></p>
+            <p>Phone: <span><?php echo esc_html($phone_number); ?></span></p>
+            <p>Address: <span><?php echo esc_html($address); ?></span></p>
+            <p>Client Since: <span><?php echo esc_html($client_since_formatted); ?></span></p>
+        </div>
+        <?php foreach ($invoices_by_status as $status => $invoices): ?>
+            <div class="invoices-group">
+                <div class="status"><h3>Status: <span style="background-color:<?php echo esc_attr($status_colors[$status] ?? '#000000'); ?>; color: #ffffff;"><?php echo esc_html($status); ?></span></h3></div>
+                <div class="invoice-list">
+                    <?php foreach ($invoices as $invoice): ?>
+                        <?php
+                        // Initialize the total amount due for this invoice
+                        $total_amount_due = 0;
+                        
+                        // Check if the invoice has services provided and calculate the total
+                        if (have_rows('services_provided', $invoice['ID'])): 
+                            while (have_rows('services_provided', $invoice['ID'])): the_row(); 
+                                $quantity = get_sub_field('quantity');
+                                $price = get_sub_field('price');
+                                $total_amount_due += $quantity * $price; // Calculate the line total and add to total amount due
+                            endwhile;
+                        endif;
+                        ?>
+                        <div class="item">
+                            <div class="left">
+                                <p><a href="<?php echo esc_url($invoice['permalink']); ?>"><?php echo esc_html($invoice['title']); ?></a></p>
+                            </div>
+                            <div class="right">
+                                <p>Due Date: <?php echo esc_html(date("d F Y", strtotime($invoice['due_date']))); ?></p>
+                                <p>Amount Due: R<?php echo esc_html(number_format($total_amount_due, 2, '.', ',')); ?></p>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>
 
-get_footer();
-?>
+<?php endwhile; ?>
+
+<?php get_footer(); ?>
