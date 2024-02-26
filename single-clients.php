@@ -25,10 +25,12 @@ while ( have_posts() ) : the_post();
 
     // Query invoices related to this client
     $invoice_ids = $wpdb->get_col($wpdb->prepare("
-        SELECT post_id
-        FROM $wpdb->postmeta
-        WHERE meta_key = 'associated_client'
-        AND meta_value LIKE %s
+        SELECT pm.post_id
+        FROM $wpdb->postmeta pm
+        INNER JOIN $wpdb->posts p ON pm.post_id = p.ID
+        WHERE pm.meta_key = 'associated_client'
+        AND pm.meta_value LIKE %s
+        AND p.post_status = 'publish'
     ", '%' . $wpdb->esc_like(':"' . $current_client_id . '";') . '%'));
 
     // Organize invoices by status
@@ -37,12 +39,12 @@ while ( have_posts() ) : the_post();
     if (!empty($invoice_ids)) {
         foreach ($invoice_ids as $invoice_id) {
             $status = get_post_meta($invoice_id, 'invoice_status', true);
+            $invoice_post = get_post($invoice_id); // Get the invoice post object
             $invoices_by_status[$status][] = [
                 'ID' => $invoice_id,
-                'title' => get_the_title($invoice_id),
+                'title' => $invoice_post->post_title,
                 'permalink' => get_permalink($invoice_id),
-                'due_date' => get_post_meta($invoice_id, 'due_date', true),
-                'amount_due' => get_post_meta($invoice_id, 'amount_due', true) // Assuming 'amount_due' is a custom field
+                'due_date' => get_post_meta($invoice_id, 'due_date', true)
             ];
         }
     }
@@ -60,7 +62,7 @@ while ( have_posts() ) : the_post();
 
 <div class="client-container">
     <div class="client">
-        <div class="logo"><img src="<?php echo esc_url($logo_url); ?>" alt=""></div>
+        <div class="logo"><img src="<?php echo esc_url($logo_url); ?>" alt="<?php echo esc_attr($client_name); ?> Logo"></div>
         <div class="details">
             <p>Name: <span><?php echo esc_html($client_name); ?></span></p>
             <p>Email: <span><?php echo esc_html($email_address); ?></span></p>
@@ -95,13 +97,12 @@ while ( have_posts() ) : the_post();
                                 <p>Amount Due: R<?php echo esc_html(number_format($total_amount_due, 2, '.', ',')); ?></p>
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
+
     </div>
-</div>
-
 <?php endwhile; ?>
-
 <?php get_footer(); ?>
