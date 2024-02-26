@@ -9,9 +9,88 @@
 
 global $wpdb;
 
-get_header();
+get_header(); ?>
 
-while ( have_posts() ) : the_post();
+<div class="client-container">
+    <div class="client">
+        <div class="logo"></div>
+        <div class="details">
+            <p>Name: <span>SANTS</span></p>
+            <p>Email: <span>Kobie@sants.co.za</span></p>
+            <p>Address: <span>3rd Floor, Landmark Building, 13 Umgazi Rd, Menlo Park, Pretoria, 0081</span></p>
+            <p>Client Since: <span>12/01/2024</span></p>
+        </div>
+        <div class="invoices-group">
+            <div class="status"><h3>Status: <span>Outstanding</span></h3></div>
+            <div class="invoice-list">
+                <div class="item">
+                    <div class="left">
+                        <p><a href="#">SANTS - FEB - 2024</a></p>
+                    </div>
+                    <div class="right">
+                        <p>Due Date: 22 March 2024</p>
+                        <p>Amount Due: R500</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="left">
+                        <p><a href="#">SANTS - FEB - 2024</a></p>
+                    </div>
+                    <div class="right">
+                        <p>Due Date: 22 March 2024</p>
+                        <p>Amount Due: R500</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="left">
+                        <p><a href="#">SANTS - FEB - 2024</a></p>
+                    </div>
+                    <div class="right">
+                        <p>Due Date: 22 March 2024</p>
+                        <p>Amount Due: R500</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status"><h3>Status: <span>Completed</span></h3></div>
+            <div class="invoice-list">
+                <div class="item">
+                    <div class="left">
+                        <p><a href="#">SANTS - FEB - 2024</a></p>
+                    </div>
+                    <div class="right">
+                        <p>Due Date: 22 March 2024</p>
+                        <p>Amount Due: R500</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="left">
+                        <p><a href="#">SANTS - FEB - 2024</a></p>
+                    </div>
+                    <div class="right">
+                        <p>Due Date: 22 March 2024</p>
+                        <p>Amount Due: R500</p>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="left">
+                        <p><a href="#">SANTS - FEB - 2024</a></p>
+                    </div>
+                    <div class="right">
+                        <p>Due Date: 22 March 2024</p>
+                        <p>Amount Due: R500</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php while ( have_posts() ) : the_post();
 
     $current_client_id = get_the_ID();
 ?>

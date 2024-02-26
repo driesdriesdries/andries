@@ -1,3 +1,57 @@
-.client {
-    
+$padding: 2rem;
+.client-container {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    p {
+        margin-bottom: 1rem;
+    }
+    .client {
+        width: 80rem;
+        max-width: 1140px;
+        border: 1px solid #2f2f2f;
+        padding: $padding;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        .logo {
+            width: 20rem;
+            height: 20rem;
+            background-color: teal;
+            background: url('http://localhost:8888/andries/wp-content/uploads/2024/01/DALL·E-2024-01-11-06.47.22-An-image-that-encapsulates-the-essence-of-visual-pleasure.-Imagine-a-serene-landscape-with-a-vibrant-sunset-sky-casting-a-warm-golden-light-over-a-tr.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .details {
+            background-color: tomato;
+            margin-top: 1rem;
+            font-weight: bold;
+            p span {
+                font-weight: 100;
+            }
+        }
+        .invoices-group {
+            background-color: cyan;
+            .status {
+                background-color: royalblue;
+                display: inline-block;
+                margin-top: 1rem;
+            }
+            .invoice-list {
+                background-color: magenta;
+                .item {
+                    background-color: honeydew;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1rem;
+                    .left {
+                        background-color: rosybrown;
+                    }
+                    .right {
+                        background-color: yellow;
+                    }
+                }
+            }
+        }
+    }
 }

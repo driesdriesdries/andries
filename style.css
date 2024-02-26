@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: Andries
 Theme URI: http://andries.io/
@@ -191,6 +192,51 @@ h6 {
       padding: 0 2rem;
       border-top: 1px solid #2f2f2f;
       padding-top: 4rem; }
+
+.client-container {
+  background-color: pink;
+  display: flex;
+  justify-content: center; }
+  .client-container p {
+    margin-bottom: 1rem; }
+  .client-container .client {
+    width: 80rem;
+    max-width: 1140px;
+    border: 1px solid #2f2f2f;
+    padding: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column; }
+    .client-container .client .logo {
+      width: 20rem;
+      height: 20rem;
+      background-color: teal;
+      background: url("http://localhost:8888/andries/wp-content/uploads/2024/01/DALL·E-2024-01-11-06.47.22-An-image-that-encapsulates-the-essence-of-visual-pleasure.-Imagine-a-serene-landscape-with-a-vibrant-sunset-sky-casting-a-warm-golden-light-over-a-tr.png");
+      background-size: cover;
+      background-position: center; }
+    .client-container .client .details {
+      background-color: tomato;
+      margin-top: 1rem;
+      font-weight: bold; }
+      .client-container .client .details p span {
+        font-weight: 100; }
+    .client-container .client .invoices-group {
+      background-color: cyan; }
+      .client-container .client .invoices-group .status {
+        background-color: royalblue;
+        display: inline-block;
+        margin-top: 1rem; }
+      .client-container .client .invoices-group .invoice-list {
+        background-color: magenta; }
+        .client-container .client .invoices-group .invoice-list .item {
+          background-color: honeydew;
+          display: flex;
+          justify-content: space-between;
+          margin-top: 1rem; }
+          .client-container .client .invoices-group .invoice-list .item .left {
+            background-color: rosybrown; }
+          .client-container .client .invoices-group .invoice-list .item .right {
+            background-color: yellow; }
 
 .invoice-container {
   background-color: white;
