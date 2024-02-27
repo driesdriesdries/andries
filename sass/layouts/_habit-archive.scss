@@ -1,0 +1,11 @@
+.habit-archive-container {
+    display: flex;
+        .left, .right {
+            width: 50%;
+            border:1px solid #f2f2f2;
+            padding:1rem;
+        }
+        .right {
+            border-left: none;
+        }
+    }
