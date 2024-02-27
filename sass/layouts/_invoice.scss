@@ -1,0 +1,142 @@
+$padding: 2rem;
+
+.invoice-container {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    .invoice {
+        //background-color: green;
+        width: 80rem;
+        max-width: 1140px;
+        //border: 1px solid #2f2f2f;
+        padding: $padding;
+        margin-top: 1rem;
+        box-shadow: var(--shadow);
+        .header {
+            //background-color: tomato;
+            text-align: right;
+            border-bottom: 2px solid #2f2f2f;
+            padding-top: $padding;
+            padding-bottom: $padding;
+            p {
+                margin-bottom: .5rem;
+            }
+        }
+        .details {
+            .left, .right {
+                width: 50%;
+                h4 {
+                    //background-color: yellow;
+                    margin-bottom: 1rem;
+                }
+            }
+            padding-top: $padding;
+            padding-bottom: $padding;
+            // background-color: #fbfbfb;
+            display: flex;
+            justify-content: space-between;
+            .left {
+                //background-color: yellow;
+            }
+            .right {
+                //background-color: crimson;
+                text-align: right;
+                p {
+                    margin-bottom: .5rem;
+                }
+            }
+        }
+        .table {
+            //background-color: lightblue;
+            // Responsive table styling with SCSS
+            $table-border-color: #ddd;
+            $thead-background-color: #f2f2f2;
+            $mobile-breakpoint: 600px;
+            padding-top: $padding;
+            padding-bottom: $padding;
+            table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 2rem;
+
+            th, td {
+                text-align: left;
+                padding: $padding;
+                border: 1px solid $table-border-color;
+            }
+
+            th {
+                background-color: $thead-background-color;
+            }
+            }
+
+            @media screen and (max-width: $mobile-breakpoint) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+
+            thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            tr { border: 1px solid #ccc; }
+
+            td {
+                border: none;
+                border-bottom: 1px solid #eee;
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+
+                &:before {
+                // Now like a table header
+                position: absolute;
+                // Top/left values mimic padding
+                top: 6px;
+                left: 6px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+                }
+            }
+
+            // Label the data
+            td:nth-of-type(1):before { content: "Items"; }
+            td:nth-of-type(2):before { content: "Quantity"; }
+            td:nth-of-type(3):before { content: "Price"; }
+            td:nth-of-type(4):before { content: "Amount"; }
+            }
+
+        }
+        .total-container {
+            //background-color: peachpuff;
+            text-align: right;
+            span {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+                padding-top: 2rem;
+                display: inline-block;
+            }
+            .label {
+                font-weight: bold;
+                padding-right: 4rem;
+            }
+            .amount {
+                //background-color: red;
+                padding-right: 4rem;
+            }
+        }
+        .footer {
+            //background-color: orange;
+            padding: $padding;
+            p {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+  }
+  
