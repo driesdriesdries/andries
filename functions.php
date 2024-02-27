@@ -192,6 +192,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+//Invoice and Client Post Type
 function create_custom_post_types() {
     // Labels for the Clients Post Type
     $labels_clients = array(
@@ -278,3 +279,68 @@ function create_custom_post_types() {
     );
 }
 add_action('init', 'create_custom_post_types');
+
+//Habits
+function register_habit_entries_post_type() {
+    $args = array(
+        'labels'             => array(
+            'name'               => _x('Habit Entries', 'post type general name', 'your-plugin-textdomain'),
+            'singular_name'      => _x('Habit Entry', 'post type singular name', 'your-plugin-textdomain'),
+            'menu_name'          => _x('Habit Entries', 'admin menu', 'your-plugin-textdomain'),
+            'name_admin_bar'     => _x('Habit Entry', 'add new on admin bar', 'your-plugin-textdomain'),
+            'add_new'            => _x('Add New', 'habit entry', 'your-plugin-textdomain'),
+            'add_new_item'       => __('Add New Habit Entry', 'your-plugin-textdomain'),
+            'new_item'           => __('New Habit Entry', 'your-plugin-textdomain'),
+            'edit_item'          => __('Edit Habit Entry', 'your-plugin-textdomain'),
+            'view_item'          => __('View Habit Entry', 'your-plugin-textdomain'),
+            'all_items'          => __('All Habit Entries', 'your-plugin-textdomain'),
+            'search_items'       => __('Search Habit Entries', 'your-plugin-textdomain'),
+            'parent_item_colon'  => __('Parent Habit Entries:', 'your-plugin-textdomain'),
+            'not_found'          => __('No habit entries found.', 'your-plugin-textdomain'),
+            'not_found_in_trash' => __('No habit entries found in Trash.', 'your-plugin-textdomain'),
+            'archives'           => __('Habit Entry Archives', 'your-plugin-textdomain'),
+            'insert_into_item'   => __('Insert into habit entry', 'your-plugin-textdomain'),
+            'uploaded_to_this_item' => __('Uploaded to this habit entry', 'your-plugin-textdomain'),
+            'filter_items_list'     => __('Filter habit entries list', 'your-plugin-textdomain'),
+            'items_list_navigation' => __('Habit entries list navigation', 'your-plugin-textdomain'),
+            'items_list'            => __('Habit entries list', 'your-plugin-textdomain'),
+        ),
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => array('slug' => 'habit-entries'),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'menu_icon'          => 'dashicons-heart',
+        'supports'           => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments')
+    );
+
+    register_post_type('habit_entries', $args);
+}
+
+add_action('init', 'register_habit_entries_post_type');
+
+//view performance button in habit edit screen
+function yourtheme_add_view_performance_button() {
+    global $post;
+    
+    // Check if we're on the habit_entries post type
+    if ('habit_entries' === get_post_type($post->ID)) {
+        // URL to the habit entries archive page
+        $habit_archive_url = get_post_type_archive_link('habit_entries');
+        
+        // Only add the button if the archive URL is successfully retrieved
+        if ($habit_archive_url) {
+            echo '<div id="view-performance-action" class="misc-pub-section misc-pub-view-performance">';
+            echo '<a href="' . esc_url($habit_archive_url) . '" class="button button-secondary" target="_blank">View Performance</a>';
+            echo '</div>';
+        }
+    }
+}
+
+// Hook into the action
+add_action('post_submitbox_misc_actions', 'yourtheme_add_view_performance_button');
