@@ -122,6 +122,7 @@ get_header(); ?>
 		?>
 	</div>
 	<div class="right">
+		<h1 style="margin-bottom:4rem;">Here is a test Chart heading visualising my strongest habits</h1>
 		<!-- Add Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <canvas id="habitChart" width="400" height="400"></canvas>
