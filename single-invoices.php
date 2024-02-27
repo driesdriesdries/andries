@@ -7,7 +7,14 @@
  * @package Andries
  */
 
-get_header(); ?>
+get_header(); 
+if ( !is_user_logged_in() ) {
+    wp_redirect( 'https://www.andriesbester.com' ); // Direct URL
+    exit;
+}
+
+?>
+
 
 <div class="invoice-container">
     <div class="invoice">

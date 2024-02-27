@@ -10,7 +10,10 @@
 global $wpdb;
 
 get_header();
-
+if ( !is_user_logged_in() ) {
+    wp_redirect( 'https://www.andriesbester.com' ); // Direct URL
+    exit;
+}
 while ( have_posts() ) : the_post();
 
     $current_client_id = get_the_ID();
