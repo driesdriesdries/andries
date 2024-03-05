@@ -193,15 +193,6 @@ h6 {
       border-top: 1px solid #2f2f2f;
       padding-top: 4rem; }
 
-.habit-archive-container {
-  display: flex; }
-  .habit-archive-container .left, .habit-archive-container .right {
-    width: 50%;
-    border: 1px solid #f2f2f2;
-    padding: 1rem; }
-  .habit-archive-container .right {
-    border-left: none; }
-
 .hero {
   padding: 12rem 0 15rem;
   display: flex;
