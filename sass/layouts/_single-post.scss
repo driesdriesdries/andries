@@ -38,6 +38,7 @@
     }
     .post-body {
         margin-top: 8rem;
+        margin-bottom: 8rem;
         display: flex;
         justify-content: center;
         .slim {
@@ -45,6 +46,16 @@
             padding: 0 2rem;
             border-top: 1px solid #2f2f2f;
             padding-top: 4rem;
+        }
+    }
+    .backtotop {
+        text-align: center;
+        span {
+            font-size: 4rem;
+            cursor: pointer;
+        }
+        p {
+            cursor: pointer;
         }
     }
 }

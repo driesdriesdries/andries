@@ -1,0 +1,40 @@
+
+
+
+
+blockquote {
+	padding: 20px;
+	margin: 1.5em 10px;
+	position: relative;
+	font-style: italic;
+	color: #555;
+	background-color: #f9f9f9; // Light background to differentiate from the main content
+	border-left: 5px solid var(--color-primary);
+	margin-bottom: 2rem;
+	&::before {
+	  content: open-quote; // CSS-generated opening quote
+	  font-size: 4em;
+	  position: absolute;
+	  left: 10px;
+	  top: -10px;
+	  color: var(--color-primary);
+	}
+  
+	&::after {
+	  content: close-quote; // CSS-generated closing quote
+	  font-size: 4em;
+	  position: absolute;
+	  left: 10px; // Adjusted to align with the opening quote on the left
+	  //bottom: -10px;
+	  color: var(--color-primary)
+	}
+  
+	cite {
+	  display: block;
+	  font-style: normal;
+	  font-size: 1.5em; // Increased font size for better readability
+	  text-align: left; // Align citation to the left
+	  color: #666;
+	  //margin-top: 10px; // Add space between the quote and citation
+	}
+  }  

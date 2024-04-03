@@ -119,14 +119,18 @@ h2 {
 
 h3 {
   font-size: 3.2rem;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
   @media only screen and (max-width: 56.25em) {
     h3 {
       font-size: 2.5rem; } }
 
 h4 {
   font-size: 2.4rem;
-  /* 24px */ }
+  /* 24px */
+  margin-bottom: 1.8rem;
+  margin-top: 1.8rem; }
 
 h5 {
   font-size: 1.25rem;
@@ -135,6 +139,58 @@ h5 {
 h6 {
   font-size: 1rem;
   /* 16px */ }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  ul li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.3s ease; }
+    ul li:hover {
+      background-color: #f5f5f5; }
+    ul li ul {
+      margin-left: 20px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse; }
+  table th, table td {
+    text-align: left; }
+  table th {
+    font-size: 18px; }
+  table td {
+    font-size: 16px; }
+
+blockquote {
+  padding: 20px;
+  margin: 1.5em 10px;
+  position: relative;
+  font-style: italic;
+  color: #555;
+  background-color: #f9f9f9;
+  border-left: 5px solid var(--color-primary);
+  margin-bottom: 2rem; }
+  blockquote::before {
+    content: open-quote;
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    color: var(--color-primary); }
+  blockquote::after {
+    content: close-quote;
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    color: var(--color-primary); }
+  blockquote cite {
+    display: block;
+    font-style: normal;
+    font-size: 1.5em;
+    text-align: left;
+    color: #666; }
 
 .wrapper {
   width: 100%;
@@ -185,6 +241,7 @@ h6 {
           text-transform: uppercase; }
   .wrapper.single-post .post-body {
     margin-top: 8rem;
+    margin-bottom: 8rem;
     display: flex;
     justify-content: center; }
     .wrapper.single-post .post-body .slim {
@@ -192,6 +249,13 @@ h6 {
       padding: 0 2rem;
       border-top: 1px solid #2f2f2f;
       padding-top: 4rem; }
+  .wrapper.single-post .backtotop {
+    text-align: center; }
+    .wrapper.single-post .backtotop span {
+      font-size: 4rem;
+      cursor: pointer; }
+    .wrapper.single-post .backtotop p {
+      cursor: pointer; }
 
 .hero {
   padding: 12rem 0 15rem;

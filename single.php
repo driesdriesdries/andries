@@ -40,8 +40,22 @@ $category_name = (!empty($categories)) ? $categories[0]->name : 'Uncategorized';
 				<?php the_content(); ?>
 			</div>
 		</div>
+    <div class="backtotop">
+        <span>↑</span>
+        <p>back to top</p>
+        <script>
+            // Select the .backtotop div for the click event
+            document.querySelector('.backtotop').addEventListener('click', function() {
+                // Use window.scrollTo with smooth behavior
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            });
+            </script>
+        </div>    
     </div>  
-
 </main><!-- #main -->
 
 <?php
