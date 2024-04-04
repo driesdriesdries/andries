@@ -1,15 +1,7 @@
 table {
-	width: 100%;
-	border-collapse: collapse;
-	th, td {
-	  text-align: left;
-	}
-  
-	th {
-	  font-size: 18px; // Slightly larger font size for headers for emphasis
-	}
-  
 	td {
-	  font-size: 16px; // Standard font size for table cells
+		padding: 2rem;
+		font-size: 1.6rem;
+		line-height: 1.6;
 	}
-  }
+}
