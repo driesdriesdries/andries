@@ -1,0 +1,241 @@
+// Variables
+$primary-color: #5D8AA8; // Example: Air Force blue
+$secondary-color: #FFD700; // Example: Gold
+$accent-color: #FF69B4; // Example: Hot Pink
+$background-color: #F0F8FF; // Example: Alice Blue
+$text-color: #2F4F4F; // Example: Dark Slate Gray
+
+// General Styles
+.wedding-page-wrapper {
+  body {
+    font-family: Arial, sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  h5 {
+    font-size: 1.5rem;
+  }
+
+  h6 {
+    font-size: 1.2rem;
+  }
+
+  .wrapper {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  // Navbar Styles
+  .navbar {
+    position: sticky;
+    top: 0;
+    background-color: $secondary-color;
+    z-index: 1000;
+
+    .wrapper {
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      //background-color: tomato;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+
+        li {
+          margin: 0;
+
+          a {
+            color: $primary-color;
+            text-decoration: none;
+            font-size: 1.6rem;
+            padding: 10px 20px;
+            display: block;
+
+            &:hover {
+              background-color: $secondary-color;
+              color: $text-color;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Smooth Scroll
+  html {
+    scroll-behavior: smooth;
+  }
+
+  // Header Section
+  #header {
+    background-color: $primary-color;
+    color: #fff;
+
+    .container {
+      text-align: center;
+
+      h1 {
+        margin: 0.5em 0;
+      }
+    }
+  }
+
+  // Welcome Message Section
+  #welcome {
+    background-color: $secondary-color;
+    color: $text-color;
+
+    .container {
+      text-align: center;
+
+      h2 {
+        margin: 0.5em 0;
+      }
+    }
+  }
+
+  // Schedule of Events Section
+  #schedule {
+    background-color: $accent-color;
+    color: #fff;
+
+    .container {
+      h2 {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+
+      h3 {
+        margin: 1em 0 0.5em 0;
+      }
+    }
+  }
+
+  // Venue Information Section
+  #venue {
+    background-color: $primary-color;
+    color: #fff;
+
+    .container {
+      h2 {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 1em;
+      }
+    }
+  }
+
+  // Accommodation Section
+  #accommodation {
+    background-color: $secondary-color;
+    color: $text-color;
+
+    .container {
+      h2 {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          margin: 0.5em 0;
+        }
+      }
+    }
+  }
+
+  // RSVP Section
+  #rsvp {
+    background-color: $accent-color;
+    color: #fff;
+
+    .container {
+      h2 {
+        text-align: center;
+        margin-bottom: 1em;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        label {
+          margin: 0.5em 0;
+        }
+
+        input, select, textarea {
+          width: 80%;
+          padding: 0.8em;
+          margin: 0.5em 0;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          font-size: 1.2rem;
+        }
+
+        button {
+          background-color: $primary-color;
+          color: #fff;
+          padding: 0.7em 1.5em;
+          border: none;
+          border-radius: 5px;
+          font-size: 1.5rem;
+          cursor: pointer;
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: darken($primary-color, 10%);
+          }
+        }
+      }
+    }
+  }
+}

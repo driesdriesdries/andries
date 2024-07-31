@@ -196,6 +196,157 @@ blockquote {
       .wrapper .main-content {
         padding: 0; } }
 
+.wedding-page-wrapper body {
+  font-family: Arial, sans-serif;
+  background-color: #F0F8FF;
+  color: #2F4F4F;
+  margin: 0;
+  padding: 0; }
+
+.wedding-page-wrapper p {
+  font-size: 1.6rem; }
+
+.wedding-page-wrapper h1 {
+  font-size: 3.5rem; }
+
+.wedding-page-wrapper h2 {
+  font-size: 3rem; }
+
+.wedding-page-wrapper h3 {
+  font-size: 2.5rem; }
+
+.wedding-page-wrapper h4 {
+  font-size: 2rem; }
+
+.wedding-page-wrapper h5 {
+  font-size: 1.5rem; }
+
+.wedding-page-wrapper h6 {
+  font-size: 1.2rem; }
+
+.wedding-page-wrapper .wrapper {
+  width: 100%;
+  padding: 20px 0; }
+
+.wedding-page-wrapper .container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+
+.wedding-page-wrapper .navbar {
+  position: sticky;
+  top: 0;
+  background-color: #FFD700;
+  z-index: 1000; }
+  .wedding-page-wrapper .navbar .wrapper {
+    padding: 0; }
+  .wedding-page-wrapper .navbar .container {
+    display: flex;
+    justify-content: center; }
+    .wedding-page-wrapper .navbar .container ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px; }
+      .wedding-page-wrapper .navbar .container ul li {
+        margin: 0; }
+        .wedding-page-wrapper .navbar .container ul li a {
+          color: #5D8AA8;
+          text-decoration: none;
+          font-size: 1.6rem;
+          padding: 10px 20px;
+          display: block; }
+          .wedding-page-wrapper .navbar .container ul li a:hover {
+            background-color: #FFD700;
+            color: #2F4F4F;
+            border-radius: 5px; }
+
+.wedding-page-wrapper html {
+  scroll-behavior: smooth; }
+
+.wedding-page-wrapper #header {
+  background-color: #5D8AA8;
+  color: #fff; }
+  .wedding-page-wrapper #header .container {
+    text-align: center; }
+    .wedding-page-wrapper #header .container h1 {
+      margin: 0.5em 0; }
+
+.wedding-page-wrapper #welcome {
+  background-color: #FFD700;
+  color: #2F4F4F; }
+  .wedding-page-wrapper #welcome .container {
+    text-align: center; }
+    .wedding-page-wrapper #welcome .container h2 {
+      margin: 0.5em 0; }
+
+.wedding-page-wrapper #schedule {
+  background-color: #FF69B4;
+  color: #fff; }
+  .wedding-page-wrapper #schedule .container h2 {
+    text-align: center;
+    margin-bottom: 1em; }
+  .wedding-page-wrapper #schedule .container h3 {
+    margin: 1em 0 0.5em 0; }
+
+.wedding-page-wrapper #venue {
+  background-color: #5D8AA8;
+  color: #fff; }
+  .wedding-page-wrapper #venue .container h2 {
+    text-align: center;
+    margin-bottom: 1em; }
+  .wedding-page-wrapper #venue .container img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 1em; }
+
+.wedding-page-wrapper #accommodation {
+  background-color: #FFD700;
+  color: #2F4F4F; }
+  .wedding-page-wrapper #accommodation .container h2 {
+    text-align: center;
+    margin-bottom: 1em; }
+  .wedding-page-wrapper #accommodation .container ul {
+    list-style-type: none;
+    padding: 0; }
+    .wedding-page-wrapper #accommodation .container ul li {
+      margin: 0.5em 0; }
+
+.wedding-page-wrapper #rsvp {
+  background-color: #FF69B4;
+  color: #fff; }
+  .wedding-page-wrapper #rsvp .container h2 {
+    text-align: center;
+    margin-bottom: 1em; }
+  .wedding-page-wrapper #rsvp .container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .wedding-page-wrapper #rsvp .container form label {
+      margin: 0.5em 0; }
+    .wedding-page-wrapper #rsvp .container form input, .wedding-page-wrapper #rsvp .container form select, .wedding-page-wrapper #rsvp .container form textarea {
+      width: 80%;
+      padding: 0.8em;
+      margin: 0.5em 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1.2rem; }
+    .wedding-page-wrapper #rsvp .container form button {
+      background-color: #5D8AA8;
+      color: #fff;
+      padding: 0.7em 1.5em;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s; }
+      .wedding-page-wrapper #rsvp .container form button:hover {
+        background-color: #496f89; }
+
 .wrapper.single-post {
   max-width: 1140px; }
   .wrapper.single-post .back-home {
