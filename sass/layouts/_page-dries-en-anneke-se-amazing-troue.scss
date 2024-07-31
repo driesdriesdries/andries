@@ -1,9 +1,11 @@
 // Variables
-$primary-color: #5D8AA8; // Example: Air Force blue
-$secondary-color: #FFD700; // Example: Gold
-$accent-color: #FF69B4; // Example: Hot Pink
-$background-color: #F0F8FF; // Example: Alice Blue
+$primary-color: #E72929; // Example: Air Force blue
+$secondary-color: #FFE4CF; // Example: Gold
+$accent-color: #FF5BAE; // Example: Hot Pink
+$background-color: #FFFDD7; // Example: Alice Blue
 $text-color: #2F4F4F; // Example: Dark Slate Gray
+
+$bp-small: 600px; // Breakpoint for small screens
 
 // General Styles
 .wedding-page-wrapper {
@@ -15,16 +17,18 @@ $text-color: #2F4F4F; // Example: Dark Slate Gray
     padding: 0;
   }
 
-  p {
+  p, a {
     font-size: 1.6rem;
   }
 
   h1 {
     font-size: 3.5rem;
+    color: #FF69B4;
   }
 
   h2 {
     font-size: 3rem;
+    color: red;
   }
 
   h3 {
@@ -55,41 +59,46 @@ $text-color: #2F4F4F; // Example: Dark Slate Gray
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    @media only screen and (max-width: $bp-small) {
+      width: 90%;
+      padding: 10px;
+    }
   }
 
   // Navbar Styles
   .navbar {
     position: sticky;
     top: 0;
-    background-color: $secondary-color;
+    background-color: $primary-color;
     z-index: 1000;
-
+  
     .wrapper {
       padding: 0;
     }
-
+  
     .container {
       display: flex;
       justify-content: center;
-      //background-color: tomato;
-
+    //   background-color: tomato;
+  
       ul {
         list-style: none;
         margin: 0;
         padding: 0;
         display: flex;
         gap: 20px;
-
+  
         li {
           margin: 0;
-
+  
           a {
-            color: $primary-color;
+            color: $accent-color;
             text-decoration: none;
             font-size: 1.6rem;
             padding: 10px 20px;
             display: block;
-
+  
             &:hover {
               background-color: $secondary-color;
               color: $text-color;
@@ -99,7 +108,16 @@ $text-color: #2F4F4F; // Example: Dark Slate Gray
         }
       }
     }
+  
+    @media only screen and (max-width: $bp-small) {
+      .container {
+        ul {
+          gap: 10px; // Reduce gap between links
+        }
+      }
+    }
   }
+  
 
   // Smooth Scroll
   html {
@@ -118,6 +136,10 @@ $text-color: #2F4F4F; // Example: Dark Slate Gray
         margin: 0.5em 0;
       }
     }
+
+    @media only screen and (max-width: $bp-small) {
+      padding-top: 5rem;
+    }
   }
 
   // Welcome Message Section
@@ -132,21 +154,74 @@ $text-color: #2F4F4F; // Example: Dark Slate Gray
         margin: 0.5em 0;
       }
     }
+
+    @media only screen and (max-width: $bp-small) {
+      padding-top: 5rem;
+    }
   }
 
+  // Schedule of Events Section
   // Schedule of Events Section
   #schedule {
     background-color: $accent-color;
     color: #fff;
-
+  
     .container {
       h2 {
         text-align: center;
         margin-bottom: 1em;
       }
-
-      h3 {
-        margin: 1em 0 0.5em 0;
+  
+      .events {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+  
+        .card {
+          flex: 1;
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+          h3 {
+            margin: 0 0 10px 0;
+          }
+  
+          p, ul {
+            margin: 0 0 10px 0;
+          }
+  
+          ul {
+            padding-left: 20px;
+            list-style-type: disc;
+          }
+  
+          &:nth-child(1) {
+            background-color: $primary-color;
+          }
+  
+          &:nth-child(2) {
+            background-color: $secondary-color;
+            color: $text-color;
+          }
+  
+          &:nth-child(3) {
+            background-color: $background-color;
+            color: $text-color;
+          }
+        }
+      }
+    }
+  
+    @media only screen and (max-width: $bp-small) {
+      padding-top: 5rem;
+  
+      .events {
+        flex-direction: column;
+  
+        .card {
+          margin-bottom: 20px;
+        }
       }
     }
   }
@@ -157,16 +232,28 @@ $text-color: #2F4F4F; // Example: Dark Slate Gray
     color: #fff;
 
     .container {
-      h2 {
-        text-align: center;
-        margin-bottom: 1em;
+      display: flex;
+      .left {
+        width: 30%;
+        padding: 3rem;
+        ul {
+           list-style-type: circle; 
+           color: green;
+           li {
+            line-height: 6rem;
+           }
+        }
       }
+      .right {
+        width: 70%;
+        img {
+            max-width: 100%;
+        }
+      }
+    }
 
-      img {
-        width: 100%;
-        border-radius: 10px;
-        margin-top: 1em;
-      }
+    @media only screen and (max-width: $bp-small) {
+      padding-top: 5rem;
     }
   }
 
@@ -189,6 +276,10 @@ $text-color: #2F4F4F; // Example: Dark Slate Gray
           margin: 0.5em 0;
         }
       }
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding-top: 5rem;
     }
   }
 
@@ -236,6 +327,10 @@ $text-color: #2F4F4F; // Example: Dark Slate Gray
           }
         }
       }
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding-top: 5rem;
     }
   }
 }

@@ -68,28 +68,74 @@ get_header();
 
 			<!-- Schedule of Events Section -->
 			<section id="schedule">
-				<div class="wrapper">
+			<div class="wrapper">
 				<div class="container">
-					<h2>Schedule of Events</h2>
+				<h2>Schedule of Events</h2>
+				<div class="events">
+					<div class="card">
 					<h3>Friday, March 16</h3>
-					<p>Informal welcome braai at the Boma (close to the thatch roof accommodation). Starting time: 5 or 6 PM</p>
+					<h4><strong>Evening</strong></h4>
+					<ul>
+						<li>Informal welcome braai at the Boma</li>
+						<li>Braai / Gourmet Boeries and salad will be served</li>
+						<li>Please bring whatever you want to drink, but there will be some beers and drinks availble if you forgot!</li>
+						<li>Starting time: 5PM but you are welcome to arrive / attend at your own discretion and availablitiy.</li>
+					</ul>
+					</div>
+					<div class="card">
 					<h3>Saturday, March 17</h3>
-					<p>Morning: Free time</p>
-					<p>Afternoon: Welcoming drinks at either the Weir or the Ceremony area at the big fallen tree.</p>
-					<p>Evening: Reception at the Stone Barn, starting at roughly 5 PM. This will include the main course, speeches, dancing, and dessert.</p>
+						<h4><strong>Morning</strong></h4>
+						<ul>
+							<li>Free time to explore or relax.</li>
+							
+						</ul>
+
+						<h4><strong>Afternoon</strong></h4>
+						<ul>
+						<li>Welcoming drinks at the Weir or Ceremony area.</li>
+						<li>Photos and hanging out with friends</li>
+						</ul>
+
+						<h4><strong>Evening</strong></h4>
+						<ul>
+						<li>Reception at the Stone Barn, starting at 5 PM.</li>
+						<li>Main course and dessert</li>
+						<li>Speeches, Dancing and having a good time</li>
+						</ul>
+				
+					</div>
+					<div class="card">
 					<h3>Sunday, March 18</h3>
-					<p>No planned activities. Feel free to explore and enjoy what Greyton has to offer.</p>
+					<p>No planned activities.</p>
+					<ul>
+						<li>Explore Greyton</li>
+						<li>Hiking trails</li>
+						<li>Quaint shops and cafes</li>
+						<li>Relax and unwind</li>
+					</ul>
+					</div>
 				</div>
 				</div>
+			</div>
 			</section>
+
+
 
 			<!-- Venue Information Section -->
 			<section id="venue">
 				<div class="wrapper">
 				<div class="container">
-					<h2>Venue Information</h2>
-					<p>Address: XC35+C4, GPS 34° 02' 31" S, 19° 24' 04.5" E, Helderstroom, 7230</p>
-					<img src="path_to_map_image.jpg" alt="Map to Venue">
+					<div class="left">
+						<h2>Venue Information</h2>
+						<ul>
+							<li><a href="https://maps.app.goo.gl/zH2L1iQLcdx8G3tj9">Google Maps</a></li>
+							<li><a href="https://www.elandsklooffarmcottages.co.za/">Link to Elandskloof Website</a></li>
+							<li><a href="https://www.youtube.com/watch?v=JxJ0uPS6q3M">Elandskloof Aerial Overview Youtube</a></li>
+						</ul>
+					</div>
+					<div class="right">
+						<img src="https://www.andriesbester.com/wp-content/uploads/2024/07/WhatsApp-Image-2024-07-25-at-15.19.10.jpeg" alt="Map to Venue">
+					</div>
 				</div>
 				</div>
 			</section>
@@ -113,27 +159,16 @@ get_header();
 			<!-- RSVP Section -->
 			<section id="rsvp">
 				<div class="wrapper">
-				<div class="container">
+					<div class="container">
 					<h2>RSVP</h2>
 					<p>Please fill out the form below to let us know if you can join us.</p>
-					<!-- Insert Contact Form 7 or Google Form here -->
-					<form action="your_form_handler_url" method="POST">
-					<label for="name">Name:</label>
-					<input type="text" id="name" name="name" required>
-					<label for="email">Email:</label>
-					<input type="email" id="email" name="email" required>
-					<label for="attending">Will you be attending?</label>
-					<select id="attending" name="attending" required>
-						<option value="yes">Yes</option>
-						<option value="no">No</option>
-					</select>
-					<label for="message">Message:</label>
-					<textarea id="message" name="message"></textarea>
-					<button type="submit">Submit</button>
-					</form>
-				</div>
+					<!-- This will output the content set in the WordPress editor -->
+					<?php the_content(); ?>
+					</div>
 				</div>
 			</section>
+
+
 		</div>	
 
 	</main><!-- #main -->

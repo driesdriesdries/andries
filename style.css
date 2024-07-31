@@ -198,19 +198,21 @@ blockquote {
 
 .wedding-page-wrapper body {
   font-family: Arial, sans-serif;
-  background-color: #F0F8FF;
+  background-color: #FFFDD7;
   color: #2F4F4F;
   margin: 0;
   padding: 0; }
 
-.wedding-page-wrapper p {
+.wedding-page-wrapper p, .wedding-page-wrapper a {
   font-size: 1.6rem; }
 
 .wedding-page-wrapper h1 {
-  font-size: 3.5rem; }
+  font-size: 3.5rem;
+  color: #FF69B4; }
 
 .wedding-page-wrapper h2 {
-  font-size: 3rem; }
+  font-size: 3rem;
+  color: red; }
 
 .wedding-page-wrapper h3 {
   font-size: 2.5rem; }
@@ -235,11 +237,15 @@ blockquote {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+  @media only screen and (max-width: 600px) {
+    .wedding-page-wrapper .container {
+      width: 90%;
+      padding: 10px; } }
 
 .wedding-page-wrapper .navbar {
   position: sticky;
   top: 0;
-  background-color: #FFD700;
+  background-color: #E72929;
   z-index: 1000; }
   .wedding-page-wrapper .navbar .wrapper {
     padding: 0; }
@@ -255,57 +261,105 @@ blockquote {
       .wedding-page-wrapper .navbar .container ul li {
         margin: 0; }
         .wedding-page-wrapper .navbar .container ul li a {
-          color: #5D8AA8;
+          color: #FF5BAE;
           text-decoration: none;
           font-size: 1.6rem;
           padding: 10px 20px;
           display: block; }
           .wedding-page-wrapper .navbar .container ul li a:hover {
-            background-color: #FFD700;
+            background-color: #FFE4CF;
             color: #2F4F4F;
             border-radius: 5px; }
+  @media only screen and (max-width: 600px) {
+    .wedding-page-wrapper .navbar .container ul {
+      gap: 10px; } }
 
 .wedding-page-wrapper html {
   scroll-behavior: smooth; }
 
 .wedding-page-wrapper #header {
-  background-color: #5D8AA8;
+  background-color: #E72929;
   color: #fff; }
   .wedding-page-wrapper #header .container {
     text-align: center; }
     .wedding-page-wrapper #header .container h1 {
       margin: 0.5em 0; }
+  @media only screen and (max-width: 600px) {
+    .wedding-page-wrapper #header {
+      padding-top: 5rem; } }
 
 .wedding-page-wrapper #welcome {
-  background-color: #FFD700;
+  background-color: #FFE4CF;
   color: #2F4F4F; }
   .wedding-page-wrapper #welcome .container {
     text-align: center; }
     .wedding-page-wrapper #welcome .container h2 {
       margin: 0.5em 0; }
+  @media only screen and (max-width: 600px) {
+    .wedding-page-wrapper #welcome {
+      padding-top: 5rem; } }
 
 .wedding-page-wrapper #schedule {
-  background-color: #FF69B4;
+  background-color: #FF5BAE;
   color: #fff; }
   .wedding-page-wrapper #schedule .container h2 {
     text-align: center;
     margin-bottom: 1em; }
-  .wedding-page-wrapper #schedule .container h3 {
-    margin: 1em 0 0.5em 0; }
+  .wedding-page-wrapper #schedule .container .events {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; }
+    .wedding-page-wrapper #schedule .container .events .card {
+      flex: 1;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+      .wedding-page-wrapper #schedule .container .events .card h3 {
+        margin: 0 0 10px 0; }
+      .wedding-page-wrapper #schedule .container .events .card p, .wedding-page-wrapper #schedule .container .events .card ul {
+        margin: 0 0 10px 0; }
+      .wedding-page-wrapper #schedule .container .events .card ul {
+        padding-left: 20px;
+        list-style-type: disc; }
+      .wedding-page-wrapper #schedule .container .events .card:nth-child(1) {
+        background-color: #E72929; }
+      .wedding-page-wrapper #schedule .container .events .card:nth-child(2) {
+        background-color: #FFE4CF;
+        color: #2F4F4F; }
+      .wedding-page-wrapper #schedule .container .events .card:nth-child(3) {
+        background-color: #FFFDD7;
+        color: #2F4F4F; }
+  @media only screen and (max-width: 600px) {
+    .wedding-page-wrapper #schedule {
+      padding-top: 5rem; }
+      .wedding-page-wrapper #schedule .events {
+        flex-direction: column; }
+        .wedding-page-wrapper #schedule .events .card {
+          margin-bottom: 20px; } }
 
 .wedding-page-wrapper #venue {
-  background-color: #5D8AA8;
+  background-color: #E72929;
   color: #fff; }
-  .wedding-page-wrapper #venue .container h2 {
-    text-align: center;
-    margin-bottom: 1em; }
-  .wedding-page-wrapper #venue .container img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 1em; }
+  .wedding-page-wrapper #venue .container {
+    display: flex; }
+    .wedding-page-wrapper #venue .container .left {
+      width: 30%;
+      padding: 3rem; }
+      .wedding-page-wrapper #venue .container .left ul {
+        list-style-type: circle;
+        color: green; }
+        .wedding-page-wrapper #venue .container .left ul li {
+          line-height: 6rem; }
+    .wedding-page-wrapper #venue .container .right {
+      width: 70%; }
+      .wedding-page-wrapper #venue .container .right img {
+        max-width: 100%; }
+  @media only screen and (max-width: 600px) {
+    .wedding-page-wrapper #venue {
+      padding-top: 5rem; } }
 
 .wedding-page-wrapper #accommodation {
-  background-color: #FFD700;
+  background-color: #FFE4CF;
   color: #2F4F4F; }
   .wedding-page-wrapper #accommodation .container h2 {
     text-align: center;
@@ -315,9 +369,12 @@ blockquote {
     padding: 0; }
     .wedding-page-wrapper #accommodation .container ul li {
       margin: 0.5em 0; }
+  @media only screen and (max-width: 600px) {
+    .wedding-page-wrapper #accommodation {
+      padding-top: 5rem; } }
 
 .wedding-page-wrapper #rsvp {
-  background-color: #FF69B4;
+  background-color: #FF5BAE;
   color: #fff; }
   .wedding-page-wrapper #rsvp .container h2 {
     text-align: center;
@@ -336,7 +393,7 @@ blockquote {
       border-radius: 5px;
       font-size: 1.2rem; }
     .wedding-page-wrapper #rsvp .container form button {
-      background-color: #5D8AA8;
+      background-color: #E72929;
       color: #fff;
       padding: 0.7em 1.5em;
       border: none;
@@ -345,7 +402,10 @@ blockquote {
       cursor: pointer;
       transition: background-color 0.3s; }
       .wedding-page-wrapper #rsvp .container form button:hover {
-        background-color: #496f89; }
+        background-color: #c71616; }
+  @media only screen and (max-width: 600px) {
+    .wedding-page-wrapper #rsvp {
+      padding-top: 5rem; } }
 
 .wrapper.single-post {
   max-width: 1140px; }
